@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
-* Студент: [Юрий Фролов](https://up.htmlacademy.ru/adaptive-individual/1/user/2153589).
-* Наставник: `Неизвестно`.
+- Студент: [Юрий Фролов](https://up.htmlacademy.ru/adaptive-individual/1/user/2153589).
+- Наставник: `Татьяна Симоненко`.
 
 ---
 
