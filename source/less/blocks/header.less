@@ -1,13 +1,24 @@
 .header {
-  .flex-row-align();
+  width: 320px;
+  margin: 0 auto;
+  padding: 21px 0;
 }
 
-.header__logo-link {
-  margin-right: 14px;
+.header__container {
+  .flex(space-between, center);
+  flex-wrap: wrap;
 }
 
 .header__toggle {
-  @media (min-width: 1440px) {
-    display: none;
-  }
+  .button-reset();
+  width: 24px;
+  height: 24px;
+  background-image: ~'url("../img/hamburger-menu.svg")';
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px 24px;
+}
+
+.header__nav {
+  display: none;
 }

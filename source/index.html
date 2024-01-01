@@ -6,54 +6,58 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
-    <header class="header container">
-      <a class="header__logo-link" href="#">
-        <img
-          class="header__logo-image"
-          src="img/logo-image-mobile.svg"
-          alt="Cat Energy."
-          width="33"
-          height="38"
-        />
-      </a>
-      <a class="header__logo-link" href="#">
-        <img
-          class="header__logo-text"
-          src="img/logo-text.svg"
-          alt="Cat Energy - функциональное питание для котов."
-          width="101"
-          height="18"
-        />
-      </a>
-      <nav class="header__nav">
-        <ul class="header__list header-list">
-          <li class="header-list__item">
-            <a class="header-list__link header-list__link--current" href="#">Главная</a>
-          </li>
-          <li class="header-list__item">
-            <a class="header-list__link" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="header-list__item">
-            <a class="header-list__link" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
-      <button class="header__toggle" type="button">
-        <span class="visually-hidden">Открыть модальное окно.</span>
-      </button>
+    <header class="header">
+      <div class="header__container container">
+        <a class="header__logo-link" href="#">
+          <img
+            class="header__logo-image"
+            src="img/logo-image-mobile.svg"
+            alt="Cat Energy."
+            width="33"
+            height="38"
+          />
+        </a>
+        <a class="header__logo-link" href="#">
+          <img
+            class="header__logo-text"
+            src="img/logo-text.svg"
+            alt="Cat Energy - функциональное питание для котов."
+            width="101"
+            height="18"
+          />
+        </a>
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li class="header__list-item">
+              <a class="header__list-link header__list-link--current" href="#">Главная</a>
+            </li>
+            <li class="header__list-item">
+              <a class="header__list-link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="header__list-item">
+              <a class="header__list-link" href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="header__toggle" type="button">
+          <span class="visually-hidden">Открыть модальное окно.</span>
+        </button>
+      </div>
     </header>
     <main class="main main--index">
-      <section class="promo container">
-        <h1 class="promo__title">Функциональное питание для котов</h1>
-        <p class="promo__slogan">Занялся собой? Займись котом!</p>
-        <img
-          class="promo__image"
-          src="img/promo-image.png"
-          alt="Cat Energy - это функциональное питание для котов."
-          width="280"
-          height="270"
-        />
-        <a class="promo__button button-primary" href="form.html">Подобрать программу</a>
+      <section class="promo">
+        <div class="promo__container container">
+          <h1 class="promo__title">Функциональное питание для котов</h1>
+          <p class="promo__slogan">Занялся собой? Займись котом!</p>
+          <img
+            class="promo__image"
+            src="img/promo-image.png"
+            alt="Cat Energy - это функциональное питание для котов."
+            width="280"
+            height="270"
+          />
+          <a class="promo__button button button--primary" href="form.html">Подобрать программу</a>
+        </div>
       </section>
       <section class="programmes container">
         <h2 class="visually-hidden">Программы питания для котов</h2>
@@ -65,7 +69,7 @@
               деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу
               сбросить лишний вес.
             </p>
-            <a class="program__button" href="catalog.html#slim">каталог slim</a>
+            <a class="program__button button button--slim" href="catalog.html#slim">каталог slim</a>
           </li>
           <li class="programmes__item program">
             <h3 class="program__title">Набор массы</h3>
@@ -73,7 +77,7 @@
               Заработать авторитет среди дворовых котов и даже собак? Серия Cat
               Energy Pro поможет вашему коту нарастить необходимые мышцы!
             </p>
-            <a class="program__button" href="catalog.html#pro">каталог pro</a>
+            <a class="program__button button button--slim" href="catalog.html#pro">каталог pro</a>
           </li>
         </ul>
       </section>
