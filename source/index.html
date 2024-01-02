@@ -194,12 +194,15 @@
             </address>
           </div>
         </div>
-        <div class="contacts__map" id="map"></div>
+        <div class="contacts__map" id="map">
+          <span class="visually-hidden">Интерактивная карта.</span>
+        </div>
       </section>
     </main>
     <footer class="footer">
-      <div class="container">
-        <a class="footer__logo-link" href="#">
+      <ul class="footer__container container">
+        <li class="footer__item">
+          <a class="footer__logo-link" href="#">
           <img
                   class="footer__logo-text"
                   src="img/logo-text.svg"
@@ -208,13 +211,15 @@
                   height="24"
           />
         </a>
-        <ul class="footer__socials social-list">
-          <li class="social-list__item">
+        </li>
+        <li class="footer__item">
+          <ul class="footer__socials">
+          <li class="footer__socials-item">
               <span class="visually-hidden"
               >Вы можете связаться с нами в Контакте.</span
               >
             <svg
-                    class="social-list__image"
+                    class="footer__socials-image"
                     aria-hidden="true"
                     focusable="false"
                     xmlns="http://www.w3.org/2000/svg"
@@ -229,12 +234,12 @@
               />
             </svg>
           </li>
-          <li class="social-list__item">
+          <li class="footer__socials-item">
               <span class="visually-hidden"
               >Вы можете посмотреть о нас в Youtube.</span
               >
             <svg
-                    class="social-list__image"
+                    class="footer__socials-image"
                     aria-hidden="true"
                     focusable="false"
                     xmlns="http://www.w3.org/2000/svg"
@@ -249,10 +254,10 @@
               />
             </svg>
           </li>
-          <li class="social-list__item">
+          <li class="footer__socials-item">
             <span class="visually-hidden">Мы в Телеграм.</span>
             <svg
-                    class="social-list__image"
+                    class="footer__socials-image"
                     aria-hidden="true"
                     focusable="false"
                     xmlns="http://www.w3.org/2000/svg"
@@ -270,10 +275,12 @@
             </svg>
           </li>
         </ul>
-        <a class="footer__dev-link dev" href="https://htmlacademy.ru/intensive/adaptive">
-          <p class="dev__text">HTML Academy</p>
+        </li>
+        <li class="footer__item">
+          <a class="footer__dev-link" href="https://htmlacademy.ru/intensive/adaptive">
+          <p class="footer__dev-text">HTML Academy</p>
           <svg
-                  class="dev__image"
+                  class="footer__dev-image"
                   aria-hidden="true"
                   focusable="false"
                   xmlns="http://www.w3.org/2000/svg"
@@ -288,7 +295,8 @@
             />
           </svg>
         </a>
-      </div>
+        </li>
+      </ul>
     </footer>
     <script src="js/map.js"></script>
   </body>
