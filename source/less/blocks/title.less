@@ -1,0 +1,20 @@
+.title {
+  .font(36px, 40px);
+  color: @text-color-thirdly;
+  font-family: @font-family-secondary;
+  &--decor {
+    .font(24px, 26px);
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      right: -20px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 54px;
+      height: 2px;
+      background-color: @background-color-secondary;
+    }
+  }
+}

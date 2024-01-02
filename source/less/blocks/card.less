@@ -8,6 +8,11 @@
     text-align: center;
     row-gap: initial;
   }
+  &--options {
+    grid-template-columns: 1fr;
+    row-gap: 13px;
+    padding: 15px 0 19px;
+  }
 }
 
 .card__img-wrapper {
@@ -29,6 +34,9 @@
     color: #111111;
     max-width: 100%;
   }
+  &--options {
+    max-width: 100%;
+  }
   a {
     text-decoration: none;
     color: inherit;
@@ -46,6 +54,7 @@
 
 .card__specs-item {
   .flex(space-between, stretch);
+  margin: 0;
 }
 
 .card__info {
