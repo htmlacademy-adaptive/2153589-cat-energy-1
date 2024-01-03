@@ -1,0 +1,69 @@
+.custom {
+  .flex-row-align();
+}
+
+.custom__input {
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+  position: relative;
+  &--radio::after {
+    border-radius: 50%;
+  }
+  &::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: @background-color-primary;
+    border: 1px solid #cdcdcd;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+}
+
+.custom__input[type="checkbox"]:checked::after {
+  background: ~'url("../img/tick.svg")', linear-gradient(0deg, @background-color-primary 0%, @background-color-primary 100%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px, 100%;
+}
+
+.custom__input[type="radio"]:checked::after {
+  background: ~'url("../img/radio.svg")', linear-gradient(0deg, @background-color-primary 0%, @background-color-primary 100%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 17px, 100%;
+}
+
+.custom__input:not(:disabled):hover::after {
+  background-color: #cfdde970;
+}
+
+.custom__input:focus::after {
+  box-shadow: 0 0 0 0.1rem @background-color-promo;
+  background-color: #ffffff;
+}
+
+.custom__input:focus:not(:focus-visible)::after {
+  box-shadow: none;
+}
+
+.custom__input:focus-visible::after {
+  background-color: #ffffff;
+  box-shadow: 0 0 0 0.1rem @background-color-promo;
+}
+
+.custom__input:not(:disabled):active::after {
+  background-color: #a4bcd640;
+}
+
+.custom__input:disabled::after,
+.custom__input:disabled + label {
+  opacity: 0.3;
+  pointer-events: none;
+}
+

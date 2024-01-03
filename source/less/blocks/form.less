@@ -1,0 +1,122 @@
+.form {
+  width: 320px;
+  margin: 0 auto;
+  padding: 27px 0 32px;
+  font-family: @font-family-secondary;
+  text-transform: uppercase;
+  border-top: 1px solid #d9d9d9;
+  overflow: hidden;
+}
+
+.form__title {
+  margin: 0 0 36px;
+  text-transform: initial;
+}
+
+.form__desc {
+  max-width: 80%;
+  color: @text-color-thirdly;
+  margin: 0 0 15px;
+}
+
+.form__field {
+  border: none;
+  margin: 0;
+  padding: 0;
+  &--cat {
+    padding: 24px 0;
+    border-bottom: 1px solid #d9d9d9;
+  }
+  &--program {
+    padding: 22px 0 19px;
+    border-bottom: 1px solid #d9d9d9;
+    margin-bottom: 26px;
+  }
+  &--owner {
+    margin-bottom: 24px;
+  }
+  &--comment {
+    margin-bottom: 23px;
+  }
+  &--add {
+    margin-bottom: 34px;
+  }
+}
+
+.form__legend {
+  &::after {
+    left: 110%;
+    width: 100%;
+  }
+  &--owner {
+    max-width: 80%;
+    margin-bottom: 35px;
+  }
+  &--comment {
+    margin-bottom: 38px;
+  }
+  &--add {
+    margin-bottom: 36px;
+  }
+}
+
+.form__label {
+  .font(16px,18px);
+  .flex-row-align();
+  margin-bottom: 14px;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    right: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &--tel::after {
+    width: 17px;
+    height: 13px;
+    background: transparent ~'url("../img/tel-icon.svg")' no-repeat center / 17px 13px;
+  }
+  &--mail::after {
+    width: 15px;
+    height: 15px;
+    background: transparent ~'url("../img/mail-icon.svg")' no-repeat center / 15px;
+  }
+}
+
+.form__input,
+.form__comment {
+  color: @text-color-primary;
+  text-transform: uppercase;
+  font-family: @font-family-secondary;
+  margin-left: 13px;
+  padding: 14px 30px 14px 15px;
+  border: 1px solid #e7e7e7;
+  flex-grow: 1;
+}
+
+.form__comment {
+  width: 100%;
+  text-transform: uppercase;
+  font-family: @font-family-secondary;
+  margin: 0;
+  padding: 14px 14px 14px 15px;
+}
+
+.form__list {
+  .list-reset();
+  &--radio > *:not(:last-child) {
+    margin-bottom: 13px;
+  }
+}
+
+.form__button {
+  width: 100%;
+  margin-bottom: 21px;
+}
+
+.form__tip {
+  .font(14px, 16px);
+  color: @text-color-thirdly;
+  text-align: center;
+}
