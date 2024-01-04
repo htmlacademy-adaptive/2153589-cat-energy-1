@@ -1,17 +1,11 @@
 .header {
-  width: 320px;
-  margin: 0 auto;
+  .flex(space-between, center);
+  flex-wrap: wrap;
   background-color: @background-color-primary;
   position: sticky;
   top: 0;
   z-index: 2;
   min-height: 66px;
-}
-
-.header__container {
-  .flex(space-between, center);
-  flex-wrap: wrap;
-  position: relative;
 }
 
 .header__logo-link {
