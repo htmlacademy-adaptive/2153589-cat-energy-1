@@ -7,6 +7,9 @@
 
 .footer__list {
   .list-reset();
+  @media (min-width: @tablet-width) {
+    .flex(space-between, center);
+  }
 }
 
 .footer__item {
@@ -14,6 +17,9 @@
   padding: 20px 0;
   &:not(:last-child) {
     border-bottom: 1px solid #d9d9d9;
+    @media (min-width: @tablet-width) {
+      border: none;
+    }
   }
 }
 
@@ -29,4 +35,14 @@
   color: @text-color-primary;
   text-decoration: none;
   width: 100%;
+  @media (min-width: @tablet-width) {
+    justify-content: flex-end;
+    width: fit-content;
+  }
+}
+
+.footer__dev-image {
+  @media (min-width: @tablet-width) {
+    margin-left: 23px;
+  }
 }

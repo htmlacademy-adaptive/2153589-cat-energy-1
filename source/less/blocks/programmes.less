@@ -5,8 +5,34 @@
 }
 
 .programmes__item {
+  display: grid;
+  grid-template-columns: 75px 1fr;
+  column-gap: 19px;
   background-color: #f2f2f2;
   padding: 20px;
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 300px;
+    padding: 77px 52px 52px;
+  }
+}
+
+.programmes__icon {
+  margin-right: 20px;
+  background-image: ~'url("../img/programmes-cat-to-thin.svg")';
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: contain;
+  &--fat {
+    background-image: ~'url("../img/programmes-cat-to-fat.svg")';
+    margin-right: 11px;
+  }
+  @media (min-width: @tablet-width) {
+    width: 268px;
+    height: 100%;
+    grid-column: 2;
+    grid-row: 1 / 3;
+    margin: 0;
+  }
 }
 
 .programmes__item-title {
@@ -16,27 +42,14 @@
   color: @text-color-thirdly;
   font-family: @font-family-secondary;
   text-transform: uppercase;
-  &::before {
-    content: "";
-    width: 50px;
-    height: 53px;
-    margin-right: 20px;
-    background-image: ~'url("../img/programmes-cat-to-thin.svg")';
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 50px 53px;
-  }
-  &--fat::before {
-    width: 67px;
-    height: 50px;
-    background-image: ~'url("../img/programmes-cat-to-fat.svg")';
-    background-size: 67px 50px;
-    margin-right: 11px;
+  @media (min-width: @tablet-width) {
+    grid-column: 1;
   }
 }
 
 .programmes__item-desc {
   .flex-column();
+  grid-column: span 2;
   &::after {
     content: "";
     display: block;
@@ -44,5 +57,18 @@
     height: 1px;
     background-color: #d9d9d9;
     margin: 23px 0 9px;
+  }
+  @media (min-width: @tablet-width) {
+    grid-column: 1;
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.programmes__item-button {
+  grid-column: span 2;
+  @media (min-width: @tablet-width) {
+    grid-column: 1;
   }
 }

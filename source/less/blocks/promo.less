@@ -9,17 +9,51 @@
   background: linear-gradient(0deg, @background-color-primary 35%, @background-color-promo 35%, @background-color-promo 100%), ~'url("../img/promo-background.png")' no-repeat top;
   background-color: @background-color-secondary;
   background-size: cover, 100% 75%;
+  position: relative;
+  @media (min-width: @tablet-width) {
+    background: linear-gradient(0deg, @background-color-primary 0%, @background-color-primary 100%) no-repeat top;
+    background-color: @background-color-primary;
+    background-size: cover;
+    text-align: left;
+  }
 }
 
 .promo__title {
   .font(36px, 36px);
+  @media (min-width: @tablet-width) {
+    .font(60px, 60px);
+    color: @text-color-thirdly;
+  }
 }
 
 .promo__slogan {
+  .font(14px, 14px);
   text-transform: uppercase;
   margin-bottom: 29px;
+  @media (min-width: @tablet-width) {
+    .font(20px, 20px);
+    color: @text-color-thirdly;
+  }
+}
+
+.promo__image {
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    height: 609px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 522px;
+    height: 499px;
+  }
 }
 
 .promo__button {
   width: 100%;
+  @media (min-width: @tablet-width) {
+    width: auto;
+    position: absolute;
+    top: 35%;
+    left: 20px;
+    z-index: 1;
+  }
 }

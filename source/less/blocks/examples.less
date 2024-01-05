@@ -5,10 +5,14 @@
 }
 
 .examples__title {
-  .font(36px, 40px);
-  color: @text-color-thirdly;
-  font-family: @font-family-secondary;
   margin: 0 0 40px;
+}
+
+.examples__desc {
+  margin: 0 0 20px;
+  @media (min-width: @tablet-width) {
+    margin: 0 0 55px;
+  }
 }
 
 .examples__facts {
@@ -16,6 +20,9 @@
   flex-wrap: wrap;
   text-align: center;
   margin-bottom: 20px;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 99px;
+  }
 }
 
 .examples__costs {
@@ -25,6 +32,11 @@
   text-transform: uppercase;
   flex-basis: 100%;
   margin-top: 34px;
+  @media (min-width: @tablet-width) {
+    flex-basis: 19%;
+    max-width: 174px;
+    text-align: right;
+  }
 }
 
 .examples__fact {
@@ -34,6 +46,9 @@
   border: 3px solid #cdcdcd;
   border-radius: 4px;
   position: relative;
+  @media (min-width: @tablet-width) {
+    flex-basis: 30%;
+  }
 }
 
 .examples__fact-number {
