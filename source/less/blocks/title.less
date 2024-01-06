@@ -1,26 +1,33 @@
 .title {
   .font(36px, 36px);
+  margin: 0;
   color: @text-color-thirdly;
   font-family: @font-family-secondary;
+  @media (min-width: @tablet-width) {
+    .font(60px, 60px);
+  }
   &--form {
     .font(36px, 40px);
   }
   &--decor {
     .font(24px, 26px);
+    width: fit-content;
     position: relative;
-    &::after {
+    &::after,
+    &::before {
       content: "";
       display: block;
       position: absolute;
-      right: -20px;
+      left: 105%;
       top: 50%;
       transform: translateY(-50%);
-      width: 54px;
+      width: 1800px;
       height: 2px;
       background-color: @background-color-secondary;
     }
-  }
-  @media (min-width: @tablet-width) {
-    .font(60px, 60px);
+    &::before {
+      left: -300px;
+      width: 280px;
+    }
   }
 }

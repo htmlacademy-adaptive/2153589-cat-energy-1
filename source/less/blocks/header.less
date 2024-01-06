@@ -92,8 +92,10 @@
   display: block;
   padding: 21px 0;
   position: relative;
-  @media (min-width: @desktop-width) {
-    color: @text-color-secondary;
+  &--desktop {
+    @media (min-width: @desktop-width) {
+      color: @text-color-secondary;
+    }
   }
   &--current::after {
     content: "";
@@ -104,8 +106,8 @@
     height: 2px;
     z-index: 3;
     background-color: @background-color-secondary;
-    @media (min-width: @desktop-width) {
-      color: @text-color-secondary;
-    }
+  }
+  &--desktop::after {
+    background-color: @background-color-primary;
   }
 }
