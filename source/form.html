@@ -51,61 +51,63 @@
           <p class="form__desc">
             Заполните анкету, и мы подберем программу питания для вашего кота
           </p>
-          <fieldset class="form__field form__field--cat">
-            <legend class="visually-hidden">Данные кота.</legend>
-            <label class="form__label">
-              <span class="form__label-text">ИМЯ:</span>
-              <span class="form__label-text">*</span>
-              <input class="form__input" type="text" value="барсик" />
-            </label>
-            <label class="form__label">
-              <span class="form__label-text">Вес&nbsp;(кг):</span>
-              <span class="form__label-text">*</span>
-              <input class="form__input" type="number" value="7" />
-            </label>
-            <label class="form__label">
-              <span class="form__label-text">Возраст&nbsp;(лет):</span>
-              <input class="form__input" type="number" value="7" />
-            </label>
-          </fieldset>
-          <fieldset class="form__field form__field--program">
-            <legend class="visually-hidden">Выбор программы.</legend>
-            <ul class="form__list form__list--radio">
-              <li class="form__list-item custom">
-                <input
-                  class="custom__input custom__input--radio"
-                  type="radio"
-                  name="program"
-                  value="похудение"
-                  id="to-thin"
-                  checked
-                />
-                <label class="custom__label custom__label--radio" for="to-thin">похудение</label>
-              </li>
-              <li class="form__list-item custom">
-                <input
-                  class="custom__input custom__input--radio"
-                  type="radio"
-                  name="program"
-                  value="Набор массы"
-                  id="to-fat"
-                />
-                <label class="custom__label custom__label--radio" for="to-fat">Набор массы</label>
-              </li>
-              <li class="form__list-item custom">
-                <input
-                  class="custom__input custom__input--radio"
-                  type="radio"
-                  name="program"
-                  value="Не знаю (Нужен ваш совет)"
-                  id="unknown"
-                />
-                <label class="custom__label custom__label--radio" for="unknown"
-                  >Не знаю (Нужен ваш совет)</label
-                >
-              </li>
-            </ul>
-          </fieldset>
+          <div class="form__wrapper">
+            <fieldset class="form__field form__field--cat">
+              <legend class="visually-hidden">Данные кота.</legend>
+              <label class="form__label">
+                <span class="form__label-text">ИМЯ:</span>
+                <span class="form__label-text">*</span>
+                <input class="form__input" type="text" value="барсик" />
+              </label>
+              <label class="form__label">
+                <span class="form__label-text">Вес&nbsp;(кг):</span>
+                <span class="form__label-text">*</span>
+                <input class="form__input" type="number" value="7" />
+              </label>
+              <label class="form__label">
+                <span class="form__label-text">Возраст&nbsp;(лет):</span>
+                <input class="form__input" type="number" value="7" />
+              </label>
+            </fieldset>
+            <fieldset class="form__field form__field--program">
+              <legend class="visually-hidden">Выбор программы.</legend>
+              <ul class="form__list form__list--radio">
+                <li class="form__list-item custom">
+                  <input
+                    class="custom__input custom__input--radio"
+                    type="radio"
+                    name="program"
+                    value="похудение"
+                    id="to-thin"
+                    checked
+                  />
+                  <label class="custom__label custom__label--radio" for="to-thin">похудение</label>
+                </li>
+                <li class="form__list-item custom">
+                  <input
+                    class="custom__input custom__input--radio"
+                    type="radio"
+                    name="program"
+                    value="Набор массы"
+                    id="to-fat"
+                  />
+                  <label class="custom__label custom__label--radio" for="to-fat">Набор массы</label>
+                </li>
+                <li class="form__list-item custom">
+                  <input
+                    class="custom__input custom__input--radio"
+                    type="radio"
+                    name="program"
+                    value="Не знаю (Нужен ваш совет)"
+                    id="unknown"
+                  />
+                  <label class="custom__label custom__label--radio" for="unknown"
+                    >Не знаю (Нужен ваш совет)</label
+                  >
+                </li>
+              </ul>
+            </fieldset>
+          </div>
           <fieldset class="form__field form__field--owner">
             <legend class="form__legend form__legend--owner title title--form title--decor">
               Контактные данные (владельца кота)
@@ -189,13 +191,15 @@
               </li>
             </ul>
           </fieldset>
-          <button class="form__button button button--primary" type="submit">
-            Отправить заявку
-          </button>
-          <p class="form__tip">
-            <span>*</span>
-            <span>— Обязательные поля</span>
-          </p>
+          <div class="form__footer">
+            <button class="form__button button button--primary" type="submit">
+              Отправить заявку
+            </button>
+            <p class="form__tip">
+              <span>*</span>
+              <span>— Обязательные поля</span>
+            </p>
+          </div>
       </form>
       <section class="contacts">
         <h2 class="visually-hidden">Контакты.</h2>
