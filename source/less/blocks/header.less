@@ -4,12 +4,16 @@
   background-color: @background-color-primary;
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 3;
   min-height: 66px;
   padding-top: 11px;
   padding-bottom: 11px;
   @media (min-width: @tablet-width) {
     .flex(flex-start, center);
+  }
+  @media (min-width: @desktop-width) {
+    position: relative;
+    background-color: transparent;
   }
 }
 
@@ -51,12 +55,15 @@
     position: absolute;
     top: 100%;
     left: 0;
-    z-index: 2;
   }
   @media (min-width: @tablet-width) {
     display: block;
     width: fit-content;
     margin-left: auto;
+  }
+  @media (min-width: @desktop-width) {
+    position: static;
+    background-color: transparent;
   }
 }
 
@@ -85,13 +92,20 @@
   display: block;
   padding: 21px 0;
   position: relative;
+  @media (min-width: @desktop-width) {
+    color: @text-color-secondary;
+  }
   &--current::after {
     content: "";
     position: absolute;
-    bottom: -10px;
+    bottom: -7px;
     left: 0;
     width: 100%;
     height: 2px;
+    z-index: 3;
     background-color: @background-color-secondary;
+    @media (min-width: @desktop-width) {
+      color: @text-color-secondary;
+    }
   }
 }

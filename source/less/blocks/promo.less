@@ -1,5 +1,6 @@
 .promo {
   .font(14px, 14px);
+  .flex-column();
   text-align: center;
   min-height: 480px;
   font-family: @font-family-secondary;
@@ -9,12 +10,43 @@
   background: linear-gradient(0deg, @background-color-primary 35%, @background-color-promo 35%, @background-color-promo 100%), ~'url("../img/promo-background.png")' no-repeat top;
   background-color: @background-color-secondary;
   background-size: cover, 100% 75%;
+  z-index: 2;
   position: relative;
   @media (min-width: @tablet-width) {
+    min-height: 700px;
+    align-items: flex-start;
     background: linear-gradient(0deg, @background-color-primary 0%, @background-color-primary 100%) no-repeat top;
     background-color: @background-color-primary;
     background-size: cover;
     text-align: left;
+  }
+  @media (min-width: @desktop-width) {
+    padding-left: 190px;
+    min-height: 600px;
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      top: -100px;
+      right: 0;
+      width: 50%;
+      min-height: 110%;
+      z-index: -1;
+      background: linear-gradient(0deg, @background-color-promo 35%, @background-color-promo 100%), ~'url("../img/promo-cat-desktop.png")' no-repeat top right;
+      background-color: @background-color-secondary;
+      background-size: 100% 100%;
+    }
+  }
+}
+
+.promo__wrapper {
+  position: relative;
+  z-index: 2;
+  @media (min-width: @tablet-width) {
+    max-width: 90%;
+  }
+  @media (min-width: @desktop-width) {
+    max-width: 40%;
   }
 }
 
@@ -23,6 +55,7 @@
   @media (min-width: @tablet-width) {
     .font(60px, 60px);
     color: @text-color-thirdly;
+    max-width: 430px;
   }
 }
 
@@ -33,6 +66,7 @@
   @media (min-width: @tablet-width) {
     .font(20px, 20px);
     color: @text-color-thirdly;
+    margin-bottom: 50px;
   }
 }
 
@@ -40,20 +74,22 @@
   @media (min-width: @tablet-width) {
     width: 708px;
     height: 609px;
+    position: absolute;
+    top: 47%;
+    left: 50px;
+    z-index: -1;
   }
   @media (min-width: @desktop-width) {
     width: 522px;
     height: 499px;
+    top: -50px;
+    left: 95%;
   }
 }
 
 .promo__button {
   width: 100%;
   @media (min-width: @tablet-width) {
-    width: auto;
-    position: absolute;
-    top: 35%;
-    left: 20px;
-    z-index: 1;
+    max-width: 244px;
   }
 }

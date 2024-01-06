@@ -1,7 +1,20 @@
 .examples {
-  background-color: #eaeaea;
   padding-top: 25px;
   padding-bottom: 40px;
+  @media (min-width: @tablet-width) {
+    padding-top: 47px;
+  }
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.examples__wrapper {
+  background-color: #eaeaea;
+  @media (min-width: @tablet-width) {
+    background-color: @background-color-primary;
+  }
 }
 
 .examples__title {
@@ -19,9 +32,10 @@
   .flex(space-between, center);
   flex-wrap: wrap;
   text-align: center;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
+  background-color: inherit;
   @media (min-width: @tablet-width) {
-    margin-bottom: 99px;
+    padding-bottom: 99px;
   }
 }
 
@@ -30,12 +44,19 @@
   color: @text-color-thirdly;
   font-family: @font-family-secondary;
   text-transform: uppercase;
+  background-color: inherit;
   flex-basis: 100%;
   margin-top: 34px;
   @media (min-width: @tablet-width) {
     flex-basis: 19%;
     max-width: 174px;
     text-align: right;
+  }
+  @media (min-width: @tablet-width) {
+    .flex(space-between, center);
+    flex-basis: 100%;
+    max-width: 100%;
+    text-align: left;
   }
 }
 
@@ -44,10 +65,14 @@
   flex-basis: 48%;
   padding: 14px 20px;
   border: 3px solid #cdcdcd;
+  background-color: inherit;
   border-radius: 4px;
   position: relative;
   @media (min-width: @tablet-width) {
     flex-basis: 30%;
+  }
+  @media (min-width: @desktop-width) {
+    flex-basis: 47%;
   }
 }
 
@@ -60,19 +85,25 @@
 
 .examples__fact-desc {
   .font(12px, 12px);
+  .flex-center();
   width: 60%;
-  padding: 1px;
+  padding: 2px;
   position: absolute;
-  background-color: #eaeaea;
-  bottom: -15px;
+  background-color: inherit;
+  top: 100%;
   left: 50%;
   z-index: 1;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
 }
 
 .examples__slider {
   display: flex;
   position: relative;
+  background-color: #eaeaea;
+  @media (min-width: @tablet-width) {
+    background: linear-gradient(180deg, @text-color-secondary 30%, #eaeaea 30%, #eaeaea 100%) no-repeat top;
+    background-size: cover;
+  }
 }
 
 .examples__slider-item {
