@@ -160,7 +160,6 @@ img {
 }
 @media (min-width: 768px) {
   .container {
-    max-width: 768px;
     padding: 0 30px;
   }
 }
@@ -662,6 +661,11 @@ img {
 .examples__title {
   margin: 0 0 40px;
 }
+@media (min-width: 1180px) {
+  .examples__title {
+    margin-bottom: 30%;
+  }
+}
 .examples__desc {
   margin: 0 0 20px;
 }
@@ -846,9 +850,10 @@ img {
 }
 .contacts__map {
   min-height: 362px;
-  background-color: #eaeaea;
   color: #444444;
   padding: 0;
+  background: #eaeaea url("../img/map-actual.png") no-repeat center;
+  background-size: cover;
   overflow: hidden;
 }
 .footer {
