@@ -7,9 +7,11 @@
   color: @text-color-secondary;
   padding-top: 27px;
   margin-bottom: 20px;
-  background: linear-gradient(0deg, @background-color-primary 35%, @background-color-promo 35%, @background-color-promo 100%), ~'url("../img/promo-background.png")' no-repeat top;
+  background: linear-gradient(0deg, @background-color-primary 30%, @background-color-promo 30%, @background-color-promo 100%), ~'url("../img/promo-cat-mobile.png")', linear-gradient(0deg, #4d4d53 0%, #4d4d53 100%);
   background-color: @background-color-secondary;
-  background-size: cover, 100% 75%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover, contain, cover;
   z-index: 2;
   position: relative;
   @media (min-width: @tablet-width) {
