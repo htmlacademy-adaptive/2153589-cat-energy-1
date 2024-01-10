@@ -89,7 +89,23 @@
 }
 
 .programmes__item-button {
+  .font(16px, 16px);
+  .flex-row-align();
+  justify-content: flex-start;
+  text-align: left;
+  padding: 10px 5px;
   grid-column: span 2;
+  &::after {
+    content: "";
+    display: block;
+    width: 32px;
+    height: 10px;
+    background-image: ~'url("../img/slim-btn-arrow.svg")';
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 32px 10px;
+    margin-left: 15px;
+  }
   @media (min-width: @tablet-width) {
     grid-column: 1;
   }
