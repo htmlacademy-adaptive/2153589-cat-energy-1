@@ -13,12 +13,14 @@
   row-gap: 20px;
   counter-reset: feature 0;
   @media (min-width: @tablet-width) {
-    justify-content: space-between;
-    grid-template-columns: repeat(2, 230px);
+    grid-template-columns: repeat(auto-fit, 230px);
+    column-gap: 153px;
   }
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(4, 230px);
-    column-gap: 40px;
+    justify-content: space-between;
+    column-gap: 80px;
+    row-gap: 40px;
   }
 }
 
@@ -43,7 +45,6 @@
     }
   }
 }
-
 
 .features__item-desc {
   .flex-row-align();
