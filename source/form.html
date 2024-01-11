@@ -46,7 +46,7 @@
   </header>
     <main class="main main--order">
       <h1 class="visually-hidden">Кэт энерджи - страница заказа.</h1>
-      <form class="form container" action="#" method="post">
+      <form class="form container" action="https://echo.htmlacademy.ru/" method="post">
           <h2 class="form__title title title--form">Подбор программы</h2>
           <p class="form__desc">
             Заполните анкету, и мы подберем программу питания для вашего кота
@@ -57,16 +57,16 @@
               <label class="form__label">
                 <span class="form__label-text">ИМЯ:</span>
                 <span class="form__label-text">*</span>
-                <input class="form__input" type="text" value="барсик" />
+                <input class="form__input" type="text" name="cat-name" value="барсик" required />
               </label>
               <label class="form__label">
                 <span class="form__label-text">Вес&nbsp;(кг):</span>
                 <span class="form__label-text">*</span>
-                <input class="form__input" type="number" value="7" />
+                <input class="form__input" type="number" name="cat-weight" value="7" required/>
               </label>
               <label class="form__label">
                 <span class="form__label-text">Возраст&nbsp;(лет):</span>
-                <input class="form__input" type="number" value="7" />
+                <input class="form__input" type="number" name="cat-age" value="7" />
               </label>
             </fieldset>
             <fieldset class="form__field form__field--program">
@@ -118,7 +118,9 @@
               <input
                 class="form__input"
                 type="email"
+                name="owner-email"
                 value="kuklachev@gmail.com"
+                required
               />
               <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0.500336 5.5V13.5H17.5041V5.5M0.500336 0.5H17.5041V2.5L9.00223 8.5L0.500336 2.5V0.5Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
@@ -127,7 +129,7 @@
             <label class="form__label form__label--tel">
               <span class="form__label-text">Телефон:</span>
               <span class="form__label-text">*</span>
-              <input class="form__input" type="tel" value="8 (960) 900-60-90" />
+              <input class="form__input" type="tel" name="owner-phone" value="8 (960) 900-60-90" required/>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7.00224 8H15.5041M15.5041 8L13.0036 5.5M15.5041 8L13.0036 10.5M5.50191 0.5V5.5H2.50124V10.5H5.50191V15.5H3.00135C1.50102 15.5 0.500793 14.5 0.500793 13V3C0.500793 1.5 1.50102 0.5 3.00135 0.5H5.50191Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
@@ -140,7 +142,7 @@
             <label class="visually-hidden" for="comment">Комментарий.</label>
             <textarea
               class="form__comment"
-              name="comment-field"
+              name="owner-comment"
               id="comment"
               cols="30"
               rows="5"
