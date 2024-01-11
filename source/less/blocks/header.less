@@ -5,11 +5,11 @@
   position: sticky;
   top: 0;
   z-index: 4;
+  padding-top: 21px;
+  padding-bottom: 21px;
   min-height: 66px;
-  padding-top: 11px;
-  padding-bottom: 11px;
   @media (min-width: @tablet-width) {
-    .flex(flex-start, center);
+    .flex(flex-start, flex-start);
   }
   @media (min-width: @desktop-width) {
     position: relative;
@@ -18,8 +18,7 @@
 }
 
 .header__logo-link {
-  display: block;
-  padding: 11px 0;
+  .flex-center();
   height: 100%;
   @media (min-width: @tablet-width) {
     margin-right: 13px;
@@ -35,7 +34,6 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 24px 24px;
-  padding: 21px 0;
   cursor: pointer;
   &--active {
     background-image: ~'url("../img/close-modal.svg")';
@@ -57,12 +55,15 @@
     left: 0;
   }
   @media (min-width: @tablet-width) {
-    display: block;
+    display: flex;
+    justify-content: flex-end;
     width: fit-content;
+    max-width: 87%;
     margin-left: auto;
   }
   @media (min-width: @desktop-width) {
     position: static;
+    max-width: 58%;
     background-color: transparent;
   }
 }
@@ -70,7 +71,12 @@
 .header__list {
   .list-reset();
   @media (min-width: @tablet-width) {
-    .flex(flex-end, center);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  @media (min-width: @desktop-width) {
+    justify-content: flex-end;
   }
 }
 
@@ -92,7 +98,7 @@
   display: block;
   padding: 21px 0;
   position: relative;
-  &--desktop {
+  &--index {
     @media (min-width: @desktop-width) {
       color: @text-color-secondary;
     }
@@ -107,7 +113,7 @@
     z-index: 3;
     background-color: @background-color-secondary;
   }
-  &--desktop::after {
+  &--index::after {
     background-color: @background-color-primary;
   }
 }
