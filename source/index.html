@@ -131,27 +131,25 @@
               <p class="examples__costs">Затраты на питание: <span>15 000 РУБ.</span></p>
             </div>
           </div>
-          <div class="examples__slider">
-            <div class="examples__slider-item">
+          <div class="examples__slider" id="drag-target">
+            <div class="examples__slider-item examples__slider-item--before">
               <img
-                src="img/cat-before.png"
+                src="img/examples-cat-fat-mobile.png"
                 alt="Кот до изменения программы питания."
-                width="140"
+                width="280"
                 height="256"
               />
             </div>
-            <div class="examples__slider-item">
+            <div class="examples__slider-item examples__slider-item--after">
               <img
-                src="img/cat-after.png"
+                src="img/examples-cat-thin-mobile.png"
                 alt="Кот после изменения программы питания."
-                width="140"
+                width="280"
                 height="256"
               />
             </div>
-            <div class="examples__slider-controls">
-              <span class="visually-hidden"
-              >Потянуть вправо или влево для смены картинки.</span
-              >
+            <button class="examples__slider-controls" id="drag-item">
+              <span class="visually-hidden">Потянуть вправо или влево для смены картинки.</span>
               <svg
                       aria-hidden="true"
                       focusable="false"
@@ -173,7 +171,7 @@
                 />
                 <path fill="#666" d="m16 11-8 9 8 9V11ZM32 20l-8-9v18l8-9Z" />
               </svg>
-            </div>
+            </button>
           </div>
       </section>
       <section class="contacts">
@@ -291,5 +289,6 @@
     </footer>
     <script src="js/map.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/drag.js"></script>
   </body>
 </html>
