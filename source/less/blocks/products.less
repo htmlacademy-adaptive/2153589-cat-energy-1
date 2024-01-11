@@ -28,6 +28,15 @@
 .products__item {
   border-top: 1px solid #d9d9d9;
   @media (min-width: @tablet-width) {
+    min-height: 511px;
     border: none;
+  }
+  &--more {
+    @media (min-width: @tablet-width) {
+      align-self: end;
+      min-height: calc(511px - 20%);
+      padding: 50px 20px 40px;
+      border: 2px solid #f2f2f2;
+    }
   }
 }
