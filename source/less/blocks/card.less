@@ -3,16 +3,19 @@
   grid-template-columns: repeat(2, 1fr);
   row-gap: 17px;
   padding: 20px 0 25px;
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr;
+    padding: 10px 37px 40px;
+    background: linear-gradient(180deg, @text-color-secondary 20%, #f2f2f2 20%, #f2f2f2 100%) no-repeat top;
+    //background-size: cover;
+  }
   &--more {
     grid-template-columns: 1fr;
     text-align: center;
     row-gap: initial;
-  }
-  @media (min-width: @tablet-width) {
-    grid-template-columns: 1fr;
-    padding: 10px 37px 40px;
-    background: linear-gradient(180deg, @text-color-secondary 10%, #f2f2f2 10%, #f2f2f2 100%) no-repeat top;
-    background-size: cover;
+    @media (min-width: @tablet-width) {
+      background: none;
+    }
   }
   &--options {
     grid-template-columns: 1fr;
@@ -37,9 +40,6 @@
 .card__img-wrapper {
   .flex-center();
   grid-row: span 2;
-  &--more {
-    margin-bottom: 21px;
-  }
 }
 
 .card__title {
@@ -49,10 +49,6 @@
   color: #222222;
   font-family: @font-family-secondary;
   text-transform: uppercase;
-  &--more {
-    color: #111111;
-    max-width: 100%;
-  }
   &--options {
     max-width: 100%;
     @media (min-width: @tablet-width) {
@@ -68,8 +64,29 @@
   }
 }
 
+.card__title--more {
+  color: #111111;
+  max-width: 100%;
+  &::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: ~'url("../img/add.svg")';
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    margin: 0 auto 21px;
+    @media (min-width: @tablet-width) {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+
 .card__button {
   grid-column: 1 / -1;
+  margin-top: auto;
   &--options {
     @media (min-width: @desktop-width) {
       grid-column: 3;

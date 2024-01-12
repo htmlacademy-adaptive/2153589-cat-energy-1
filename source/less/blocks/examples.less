@@ -6,7 +6,7 @@
   }
   @media (min-width: @desktop-width) {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 45%;
   }
 }
 
@@ -28,6 +28,9 @@
   margin: 0 0 20px;
   @media (min-width: @tablet-width) {
     margin: 0 0 55px;
+  }
+  @media (min-width: @desktop-width) {
+    max-width: 90%;
   }
 }
 
@@ -101,27 +104,53 @@
 
 .examples__slider {
   display: flex;
-  position: relative;
+  justify-content: center;
   background-color: #eaeaea;
+  position: relative;
+  transition: all 0.8s;
   @media (min-width: @tablet-width) {
     background: linear-gradient(180deg, @text-color-secondary 30%, #eaeaea 30%, #eaeaea 100%) no-repeat top;
     background-size: cover;
+    height: 512px;
   }
 }
 
 .examples__slider-item {
-  flex-basis: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
   img {
     display: block;
+    object-fit: contain;
+    object-position: center;
     width: 100%;
     height: 100%;
+    position: relative;
+  }
+}
+
+.examples__slider-item--before {
+  width: 50%;
+  img {
+    margin-left: 50%;
+  }
+}
+
+.examples__slider-item--after {
+  width: 50%;
+  img {
+    margin-left: -50%;
   }
 }
 
 .examples__slider-controls {
+  .button-reset();
   .position-absolute-center();
+  z-index: 3;
+  display: block;
   height: 100%;
   width: 4px;
+  padding: 0;
   border-radius: 2px;
   background-color: #666666;
   svg {
