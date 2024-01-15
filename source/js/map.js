@@ -1,4 +1,6 @@
 function initMap() {
+    const mapBlock=document.querySelector(".contacts__map");
+    mapBlock.classList.remove("contacts__map--nojs");
     const myLatLng = { lat: 59.96834114873084, lng: 30.317505457201793 };
     const  tooltipTitle = 'HTML Academy\n' + 'наб. Pеки Карповки, 5П \n' + 'Санкт-Петербург\n' + 'Россия \n' + '197022';
     const map = new google.maps.Map(document.getElementById("map"), {
