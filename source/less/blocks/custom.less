@@ -19,7 +19,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2;
+    z-index: 3;
   }
   &[type="radio"]::after {
     border-radius: 50%;
@@ -30,7 +30,7 @@
   background: ~'url("../img/tick.svg")', linear-gradient(0deg, @background-color-primary 0%, @background-color-primary 100%);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 20px, 100%;
+  background-size: 20px, 100% 100%;
 }
 
 .custom__input[type="radio"]:checked::after {
@@ -41,29 +41,12 @@
 }
 
 .custom__input:not(:disabled):hover::after {
-  background-color: #cfdde970;
-}
-
-.custom__input:focus::after {
-  box-shadow: 0 0 0 0.1rem @background-color-promo;
-  background-color: #ffffff;
-}
-
-.custom__input:focus:not(:focus-visible)::after {
-  box-shadow: none;
-}
-
-.custom__input:focus-visible::after {
-  background-color: #ffffff;
-  box-shadow: 0 0 0 0.1rem @background-color-promo;
-}
-
-.custom__input:not(:disabled):active::after {
-  background-color: #a4bcd640;
+  border-color: #bababa;
 }
 
 .custom__input:disabled::after,
 .custom__input:disabled + label {
+  border-color: #bababa;
   opacity: 0.3;
   pointer-events: none;
 }

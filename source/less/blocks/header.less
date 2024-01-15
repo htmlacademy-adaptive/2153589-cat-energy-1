@@ -25,6 +25,12 @@
   @media (min-width: @tablet-width) {
     margin-right: 13px;
   }
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .header__toggle {
@@ -106,23 +112,37 @@
   text-align: center;
   display: block;
   padding: 21px 0;
-  position: relative;
   &--index {
     @media (min-width: @desktop-width) {
       color: @text-color-secondary;
     }
   }
-  &--current::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    z-index: 3;
-    background-color: @background-color-secondary;
+  &:hover {
+    opacity: 0.6;
   }
-  &--index::after {
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.header__list-link span {
+  position: relative;
+}
+
+.header__list-link--current span::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  z-index: 3;
+  background-color: @background-color-secondary;
+}
+
+.header__list-link--index span::after {
+  @media (min-width: @desktop-width) {
     background-color: @background-color-primary;
   }
 }
+
