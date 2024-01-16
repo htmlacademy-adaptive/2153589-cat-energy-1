@@ -72,6 +72,10 @@
     position: absolute;
     top: 100%;
     left: 0;
+    border-bottom: 1px solid #e6e6e6;
+    @media (min-width: @tablet-width) {
+      border: none;
+    }
   }
   @media (min-width: @tablet-width) {
     display: flex;
@@ -79,7 +83,6 @@
     width: fit-content;
     max-width: 87%;
     margin-left: auto;
-    //padding: 21px 0;
   }
   @media (min-width: @desktop-width) {
     max-width: 58%;

@@ -118,7 +118,6 @@
 
 .examples__slider-item {
   min-height: 256px;
-  width: 50%;
   position: relative;
   overflow: hidden;
   img {
@@ -135,6 +134,17 @@
   img {
     object-position: left;
     margin-left: 10%;
+    @media (min-width: 327px) {
+      margin-left: 16%;
+    }
+    @media (min-width: 345px) {
+      object-position: center;
+      margin-left: 50%;
+    }
+    @media (min-width: 1180px) {
+      object-position: center;
+      margin-left: 40%;
+    }
   }
 }
 
@@ -143,6 +153,17 @@
   img {
     object-position: right;
     margin-left: -12%;
+    @media (min-width: 327px) {
+      margin-left: -20%;
+    }
+    @media (min-width: 345px) {
+      object-position: center;
+      margin-left: -50%;
+    }
+    @media (min-width: 1180px) {
+      object-position: center;
+      margin-left: -50%;
+    }
   }
 }
 
