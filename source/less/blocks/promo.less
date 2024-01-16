@@ -46,6 +46,7 @@
 
 .promo__title {
   .font(36px, 36px);
+  margin: 0 0 26px;
   @media (min-width: @tablet-width) {
     .font(60px, 60px);
     color: @text-color-thirdly;
@@ -58,7 +59,7 @@
 .promo__slogan {
   .font(14px, 14px);
   text-transform: uppercase;
-  margin-bottom: 29px;
+  margin: 0 0 29px;
   @media (min-width: @tablet-width) {
     .font(20px, 20px);
     color: @text-color-thirdly;
@@ -69,7 +70,10 @@
 }
 
 .promo__image {
-  margin: 0 auto;
+  display: block;
+  margin-left: -12px;
+  width: 280px;
+  height: 272px;
   @media (min-width: @tablet-width) {
     width: 708px;
     height: 609px;

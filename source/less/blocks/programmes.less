@@ -13,8 +13,7 @@
 .programmes__item {
   display: grid;
   grid-template-columns: 75px 1fr;
-  column-gap: 11px;
-  padding: 37px 20px 22px;
+  padding: 24px 20px 11px;
   background-color: #f2f2f2;
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 300px;
@@ -32,8 +31,8 @@
   display: block;
   height: 50px;
   width: 67px;
-  transform: translateX(-7%);
-  background: ~'url("../img/programmes-cat-slim.svg")' no-repeat center / contain;
+  transform: translate(-14%, -5%);
+  background: ~'url("../img/programmes-cat-slim.svg")' no-repeat top / contain;
   grid-column: 1;
   grid-row: 1;
   z-index: 1;
@@ -53,6 +52,7 @@
 
 .programmes__item--fat::before {
   background-image: ~'url("../img/programmes-cat-fat.svg")';
+  transform: translate(-11%, 22%);
 }
 
 .programmes__item::after {
@@ -81,7 +81,7 @@
 .programmes__item-title {
   .font(24px,37px);
   .flex-row-align();
-  margin: 0;
+  margin: 0 0 0 -4px;
   color: @text-color-thirdly;
   font-family: @font-family-secondary;
   text-transform: uppercase;
@@ -123,24 +123,20 @@
   justify-content: flex-start;
   text-align: left;
   max-width: fit-content;
-  padding: 10px 5px;
+  padding: 10px 22px 10px 0;
   grid-column: span 2;
   &:hover {
     opacity: 0.6;
+    svg {
+      transition: transform 0.1s;
+      transform: translateX(3px);
+    }
   }
   &:active {
     opacity: 0.3;
   }
-  &::after {
-    content: "";
-    display: block;
-    width: 32px;
-    height: 10px;
-    background-image: ~'url("../img/slim-btn-arrow.svg")';
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 32px 10px;
-    margin-left: 15px;
+  svg {
+    margin-left: 16px;
   }
   @media (min-width: @tablet-width) {
     grid-column: 1;
