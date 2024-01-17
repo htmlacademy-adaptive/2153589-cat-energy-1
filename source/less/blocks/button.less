@@ -12,8 +12,22 @@
     color: @text-color-secondary;
     background-color: @background-color-secondary;
   }
+  &--primary:hover {
+    background-color: @background-color-secondary-hover;
+  }
+  &--primary:active {
+    background-color: @background-color-secondary-hover;
+    color: rgba(@text-color-secondary, 0.3);
+  }
   &--more {
     color: @text-color-primary;
     background-color: #f2f2f2;
+  }
+  &--more:hover {
+    background-color: #ebebeb;
+  }
+  &--more:active {
+    background-color: #ebebeb;
+    color: rgba(@text-color-primary, 0.6);
   }
 }

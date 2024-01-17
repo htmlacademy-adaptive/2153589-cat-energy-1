@@ -1,7 +1,11 @@
 .products {
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
-  padding-top: 40px;
+  padding-top: 28px;
+  overflow: hidden;
+  @media (min-width: @tablet-width) {
+    border-top: none;
+  }
 }
 
 .products__title {
@@ -26,7 +30,7 @@
 }
 
 .products__item {
-  border-top: 1px solid #d9d9d9;
+  position: relative;
   @media (min-width: @tablet-width) {
     min-height: 511px;
     border: none;
@@ -38,5 +42,18 @@
       padding: 50px 20px 40px;
       border: 2px solid #f2f2f2;
     }
+  }
+}
+
+@media (max-width: @tablet-width) {
+  .products__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -110px;
+    width: 200vw;
+    height: 1px;
+    background-color: #d9d9d9;
+    z-index: 2;
   }
 }

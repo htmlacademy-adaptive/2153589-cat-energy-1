@@ -9,9 +9,12 @@ const initPosition = draggableButton.offsetLeft;
 const parentCoords = dragTarget.getBoundingClientRect();
 
 
+
 const dragX = (event) => {
     const el = event.currentTarget;
     const move = (e) => {
+        catBeforeImage.style.objectPosition="center";
+        catAfterImage.style.objectPosition="center";
         if ((el.offsetLeft + e.movementX) >= 0 && (el.offsetLeft + e.movementX) <= parentCoords.width) {
             el.style.left = `${el.offsetLeft + e.movementX}px`;
             catBefore.style.width = `${el.offsetLeft + e.movementX}px`;

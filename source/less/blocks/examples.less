@@ -1,5 +1,5 @@
 .examples {
-  padding-top: 25px;
+  padding-top: 26px;
   padding-bottom: 40px;
   @media (min-width: @tablet-width) {
     padding-top: 47px;
@@ -18,7 +18,7 @@
 }
 
 .examples__title {
-  margin: 0 0 40px;
+  margin: 0 0 42px;
   @media (min-width: @desktop-width) {
     margin-bottom: 30%;
   }
@@ -52,7 +52,7 @@
   text-transform: uppercase;
   background-color: inherit;
   flex-basis: 100%;
-  margin-top: 34px;
+  margin: 34px 0 0;
   @media (min-width: @tablet-width) {
     flex-basis: 19%;
     max-width: 174px;
@@ -68,9 +68,9 @@
 
 .examples__fact {
   margin: 0;
-  flex-basis: 48%;
-  padding: 14px 20px;
-  border: 3px solid #cdcdcd;
+  flex-basis: 44%;
+  padding: 15px 20px;
+  outline: 3px solid #cdcdcd;
   background-color: inherit;
   border-radius: 4px;
   position: relative;
@@ -96,7 +96,7 @@
   padding: 2px;
   position: absolute;
   background-color: inherit;
-  top: 100%;
+  top: 102%;
   left: 50%;
   z-index: 1;
   transform: translate(-50%, -50%);
@@ -105,6 +105,7 @@
 .examples__slider {
   display: flex;
   justify-content: center;
+  min-height: 256px;
   background-color: #eaeaea;
   position: relative;
   transition: all 0.8s;
@@ -116,15 +117,14 @@
 }
 
 .examples__slider-item {
-  height: 100%;
-  overflow: hidden;
+  min-height: 256px;
   position: relative;
+  overflow: hidden;
   img {
     display: block;
-    object-fit: contain;
-    object-position: center;
     width: 100%;
     height: 100%;
+    object-fit: cover;
     position: relative;
   }
 }
@@ -132,14 +132,38 @@
 .examples__slider-item--before {
   width: 50%;
   img {
-    margin-left: 50%;
+    object-position: left;
+    margin-left: 10%;
+    @media (min-width: 327px) {
+      margin-left: 16%;
+    }
+    @media (min-width: 345px) {
+      object-position: center;
+      margin-left: 50%;
+    }
+    @media (min-width: 1180px) {
+      object-position: center;
+      margin-left: 40%;
+    }
   }
 }
 
 .examples__slider-item--after {
   width: 50%;
   img {
-    margin-left: -50%;
+    object-position: right;
+    margin-left: -12%;
+    @media (min-width: 327px) {
+      margin-left: -20%;
+    }
+    @media (min-width: 345px) {
+      object-position: center;
+      margin-left: -50%;
+    }
+    @media (min-width: 1180px) {
+      object-position: center;
+      margin-left: -50%;
+    }
   }
 }
 
@@ -156,4 +180,21 @@
   svg {
     .position-absolute-center();
   }
+}
+
+.examples__slider-controls:hover {
+  background-color: @background-color-secondary;
+}
+
+.examples__slider-controls:hover rect {
+  stroke: @background-color-secondary;
+}
+
+.examples__slider-controls:hover path {
+  fill: @background-color-secondary;
+}
+
+
+.examples__slider-controls:active {
+  opacity: 0.6;
 }
