@@ -10,19 +10,21 @@
     <link rel="apple-touch-icon" href="img/favicons/apple.png">
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css/style.css" />
+    <script>
+      document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.min.js" async></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMv_XdjXMB8jlY8zGli26R-8xHjnem2KY&callback=initMap" defer></script>
   </head>
   <body class="page__body">
     <header class="header container">
       <a class="header__logo-link" href="#">
-        <img
-          class="header__logo-image"
-          src="img/logo-image-mobile.svg"
-          alt="Cat Energy."
-          width="33"
-          height="38"
-        />
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logo-image-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-image-tablet.svg">
+          <img class="header__logo-image" src="img/logo-image-mobile.svg" alt="Cat Energy." width="33" height="38">
+        </picture>
       </a>
       <a class="header__logo-link" href="#">
         <img
