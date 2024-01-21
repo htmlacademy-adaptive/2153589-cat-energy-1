@@ -32,14 +32,17 @@
       content: "";
       position: absolute;
       display: block;
-      top: -300px;
+      bottom: 0;
       right: 0;
-      width: 55%;
-      min-height: 140%;
+      width: 50%;
+      min-height: 150%;
       z-index: -1;
-      background: linear-gradient(0deg, @background-color-promo 35%, @background-color-promo 100%), ~'url("../img/promo-cat-desktop.png")' no-repeat top right;
-      background-color: @background-color-secondary;
-      background-size: 100% 100%;
+      background: linear-gradient(0deg, @background-color-promo 0%, @background-color-promo 100%), ~'url("../img/promo-cat-desktop-nobackground.png")' no-repeat bottom right;
+      background-color: #4e4d52;
+      background-size: 90% auto;
+      @media (min-resolution: 2dppx) {
+        background: linear-gradient(0deg, @background-color-promo 0%, @background-color-promo 100%), ~'url("../img/promo-cat-desktop@2x.png")' no-repeat bottom right;
+      }
     }
   }
 }
