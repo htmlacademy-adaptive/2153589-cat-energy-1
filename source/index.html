@@ -21,12 +21,12 @@
     <header class="header container">
       <a class="header__logo-link" href="#">
         <picture>
-          <source media="(min-width: 1200px)" srcset="img/logo-image-desktop.svg">
-          <source media="(min-width: 768px)" srcset="img/logo-image-tablet.svg">
+          <source media="(min-width: 1200px)" srcset="img/logo-image-desktop.svg" width="70" height="59">
+          <source media="(min-width: 768px)" srcset="img/logo-image-tablet.svg"  width="60" height="50">
           <img class="header__logo-image" src="img/logo-image-mobile.svg" alt="Cat Energy." width="33" height="38">
         </picture>
       </a>
-      <a class="header__logo-link" href="#">
+      <a class="header__logo-link header__logo-link" href="#">
         <img
           class="header__logo-text"
           src="img/logo-text.svg"
@@ -70,18 +70,21 @@
       <section class="promo container">
           <h1 class="promo__title">Функциональное питание для котов</h1>
           <p class="promo__slogan">Занялся собой? Займись котом!</p>
-          <picture>
-          <source media="(min-width: 1200px)" srcset="img/promo-image-desktop.png 1x, img/promo-image-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/promo-image-tablet.jpg 1x, img/promo-image-tablet@2x.jpg 2x">
-            <img
-                    class="promo__image"
-                    src="img/promo-image-mobile.png"
-                    srcset="img/promo-image-mobile@2x.png 2x"
-                    alt="Cat Energy - это функциональное питание для котов."
-                    width="280"
-                    height="270"
-            />
-        </picture>
+          <div class="promo__picture">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/promo-image-desktop.png 1x, img/promo-image-desktop@2x.png 2x" width="522" height="499">
+              <source media="(min-width: 768px)" srcset="img/promo-image-tablet.jpg 1x, img/promo-image-tablet@2x.jpg 2x" width="709" height="609">
+              <img
+                      class="promo__image"
+                      src="img/promo-image-mobile.png"
+                      srcset="img/promo-image-mobile@2x.png 2x"
+                      alt="Cat Energy - это функциональное питание для котов."
+                      width="280"
+                      height="270"
+              />
+            </picture>
+          </div>
+
           <a class="promo__button button button--primary" href="form.html">Подобрать программу</a>
       </section>
       <section class="programmes container">
@@ -172,20 +175,28 @@
         </div>
         <div class="examples__slider" id="drag-target">
           <div class="examples__slider-item examples__slider-item--before">
-            <img
-              src="img/examples-cat-fat-mobile.png"
-              alt="Кот до изменения программы питания."
-              width="560"
-              height="256"
-            />
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/examples-cat-fat-desktop.png 1x, img/examples-cat-fat-desktop@2x.png 2x" width="560" height="512">
+              <img
+                      src="img/examples-cat-fat-mobile.png"
+                      srcset="img/examples-cat-fat-mobile@2x.png 2x"
+                      alt="Кот до изменения программы питания."
+                      width="280"
+                      height="256"
+              />
+            </picture>
           </div>
           <div class="examples__slider-item examples__slider-item--after">
-            <img
-              src="img/examples-cat-thin-mobile.png"
-              alt="Кот после изменения программы питания."
-              width="280"
-              height="256"
-            />
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/examples-cat-thin-desktop.png 1x, img/examples-cat-thin-desktop@2x.png 2x" width="560" height="512">
+              <img
+                      src="img/examples-cat-thin-mobile.png"
+                      srcset="img/examples-cat-thin-mobile@2x.png 2x"
+                      alt="Кот после изменения программы питания."
+                      width="280"
+                      height="256"
+              />
+            </picture>
           </div>
           <button class="examples__slider-controls" id="drag-item">
             <span class="visually-hidden"
@@ -227,7 +238,17 @@
           </address>
         </div>
         <div class="contacts__map" id="map">
-          <img src="img/map-background.jpg" alt="Офис компании по адресу: Россия, Санкт-Петербург, наб. Pеки Карповки, 5П" width="362" height="320">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/contacts-map-desktop.jpg 1x, img/contacts-map-desktop@2x.jpg 2x" width="1440" height="400">
+            <source media="(min-width: 768px)" srcset="img/contacts-map-tablet.jpg 1x, img/contacts-map-tablet@2x.jpg 2x" width="768" height="400">
+            <img
+                   src="img/contacts-map.jpg"
+                   srcset="img/contacts-map@2x.jpg 2x"
+                   alt="Офис компании по адресу: Россия, Санкт-Петербург, наб. Pеки Карповки, 5П"
+                   width="320"
+                   height="362"
+            >
+          </picture>
         </div>
       </section>
     </main>

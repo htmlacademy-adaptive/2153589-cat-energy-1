@@ -49,10 +49,13 @@
   min-height: 362px;
   color: @text-color-primary;
   padding: 0;
-  background: #eaeaea ~'url("../img/map-background.jpg")' no-repeat center;
-  background-size: cover;
+  background-color: #eaeaea;
   overflow: hidden;
   img {
     display: block;
+    width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 }

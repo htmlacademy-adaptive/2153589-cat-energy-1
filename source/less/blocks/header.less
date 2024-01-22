@@ -15,6 +15,7 @@
   @media (min-width: @desktop-width) {
     position: relative;
     background-color: transparent;
+    padding-top: 43px;
   }
 }
 
@@ -32,10 +33,24 @@
   }
 }
 
+.header__logo-text {
+  display: block;
+  width: 101px;
+  height: 18px;
+  @media (min-width: @desktop-width) {
+    width: 118px;
+    height: 21px;
+  }
+}
+
 .header__logo-link + .header__logo-link {
-  margin-left: -10px;
-  //padding: 23px 0;
-  height: 65px;
+  padding-top: 31px;
+}
+
+.header__logo-link:first-child img {
+  display: block;
+  height: 100%;
+  width: 100%;
 }
 
 .header__toggle {
@@ -111,6 +126,9 @@
     margin-left: 33px;
     border: none;
   }
+  @media (min-width: @desktop-width) {
+    margin-left: 19px;
+  }
 }
 
 .header__list-link {
@@ -125,6 +143,7 @@
   &--index {
     @media (min-width: @desktop-width) {
       color: @text-color-secondary;
+      padding-top: 33px;
     }
   }
   &:hover {

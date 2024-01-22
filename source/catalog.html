@@ -20,13 +20,11 @@
   <body class="page__body">
     <header class="header container">
       <a class="header__logo-link" href="index.html">
-        <img
-                class="header__logo-image"
-                src="img/logo-image-mobile.svg"
-                alt="Cat Energy."
-                width="33"
-                height="38"
-        />
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logo-image-desktop.svg" width="70" height="59">
+          <source media="(min-width: 768px)" srcset="img/logo-image-tablet.svg"  width="60" height="50">
+          <img class="header__logo-image" src="img/logo-image-mobile.svg" alt="Cat Energy." width="33" height="38">
+        </picture>
       </a>
       <a class="header__logo-link" href="index.html">
         <img
@@ -355,7 +353,17 @@
             </address>
         </div>
         <div class="contacts__map" id="map">
-          <img src="img/map-background.jpg" alt="Офис компании по адресу: Россия, Санкт-Петербург, наб. Pеки Карповки, 5П" width="362" height="320">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/contacts-map-desktop.jpg 1x, img/contacts-map-desktop@2x.jpg 2x" width="1440" height="400">
+            <source media="(min-width: 768px)" srcset="img/contacts-map-tablet.jpg 1x, img/contacts-map-tablet@2x.jpg 2x" width="768" height="400">
+            <img
+                    src="img/contacts-map.jpg"
+                    srcset="img/contacts-map@2x.jpg 2x"
+                    alt="Офис компании по адресу: Россия, Санкт-Петербург, наб. Pеки Карповки, 5П"
+                    width="320"
+                    height="362"
+            >
+          </picture>
         </div>
       </section>
     </main>
