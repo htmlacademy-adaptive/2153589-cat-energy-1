@@ -91,17 +91,17 @@
   }
 }
 
-.form__label--mail {
-  svg {
-    background: transparent ~'url("../img/mail-icon.svg")' no-repeat center / 100%;
-  }
-}
+//.form__label--mail {
+//  svg {
+//    background: transparent ~'url("../img/mail-icon.svg")' no-repeat center / 100%;
+//  }
+//}
 
-.form__label--tel {
-  svg {
-    background: transparent ~'url("../img/tel-icon.svg")' no-repeat center / 100%;
-  }
-}
+//.form__label--tel {
+//  svg {
+//    background: transparent ~'url("../img/tel-icon.svg")' no-repeat center / 100%;
+//  }
+//}
 
 .form__input,
 .form__comment {
@@ -129,6 +129,10 @@
   padding: 14px 14px 14px 15px;
 }
 
+.form__input + svg {
+  color: @text-color-thirdly;
+}
+
 .form__input:hover {
   outline: 1px solid #cdcdcd;
 }
@@ -137,8 +141,8 @@
   outline: 2px solid @text-color-primary;
 }
 
-.form__input:focus + svg path {
-  stroke: @background-color-secondary;
+.form__input:focus + svg {
+  color: @background-color-secondary;
 }
 
 .form__input:invalid,
@@ -146,9 +150,9 @@
   outline: 2px solid #ff8282;
 }
 
-.form__input:invalid + svg path,
-.form__input.error + svg path {
-  stroke: #ff8282;
+.form__input:invalid + svg,
+.form__input.error + svg {
+  color: #ff8282;
 }
 
 .form__list {
