@@ -1,6 +1,6 @@
 .features {
-  padding-top: 23px;
-  padding-bottom: 49px;
+  padding-top: 45px;
+  padding-bottom: 19px;
 }
 
 .features__title {
@@ -10,7 +10,7 @@
 .features__list {
   .list-reset();
   display: grid;
-  row-gap: 20px;
+  row-gap: 36px;
   counter-reset: feature 0;
   @media (min-width: @tablet-width) {
     grid-template-columns: repeat(auto-fit, 230px);
@@ -32,18 +32,23 @@
   @media (min-width: @tablet-width) {
     min-height: 280px;
     padding: 31px 0;
-    &::before {
-      .font(280px, 280px);
-      content: counter(feature);
-      display: block;
-      position: absolute;
-      right: 5px;
-      bottom: 5px;
-      color: #e2e2e2;
-      opacity: 0.3;
-      font-family: @font-family-secondary;
-    }
   }
+}
+
+.features__item::before {
+  .font(280px, 280px);
+  content: counter(feature);
+  display: block;
+  position: absolute;
+  right: -15px;
+  bottom: 5px;
+  color: #e2e2e2;
+  opacity: 0.3;
+  font-family: @font-family-secondary;
+}
+
+.features__item:first-child::before {
+  right: 6px;
 }
 
 .features__item-desc {
@@ -61,6 +66,10 @@
     background-size: 25px 28px;
     padding: 12px;
     margin-right: 20px;
+    @media (min-width: @tablet-width) {
+      min-width: 80px;
+      min-height: 80px;
+    }
   }
   &--leaf::before {
     background-image: ~'url("../img/features-leaf.svg")';
@@ -74,10 +83,11 @@
   &--clock::before {
     background-image: ~'url("../img/features-clock.svg")';
   }
-  @media (min-width: 768px) {
+  @media (min-width: @tablet-width) {
+    .font(16px, 24px);
     flex-direction: column;
     align-items: flex-start;
-    max-width: 80%;
+    max-width: 99%;
     &::before {
       margin: 0 0 31px;
     }

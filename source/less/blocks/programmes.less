@@ -2,6 +2,9 @@
   .list-reset();
   display: grid;
   row-gap: 22px;
+  @media (min-width: @tablet-width) {
+    row-gap: 27px;
+  }
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(2, 1fr);
     justify-content: space-between;
@@ -17,10 +20,9 @@
   background-color: #f2f2f2;
   row-gap: 22px;
   @media (min-width: @tablet-width) {
-    grid-template-columns: 1fr 300px;
-    padding: 67px 52px 52px;
-    column-gap: 19px;
-    row-gap: 22px;
+    grid-template-columns: 1fr 270px;
+    padding: 68px 52px 52px;
+    row-gap: 12px;
   }
   @media (min-width: @desktop-width) {
     grid-template-columns: 150px 1fr;
@@ -39,10 +41,11 @@
   grid-row: 1;
   z-index: 1;
   @media (min-width: @tablet-width) {
-    width: 268px;
+    width: 270px;
     height: 200px;
     grid-column: 2;
     grid-row: 1 / 3;
+    transform: translate(8%, 5%);
   }
   @media (min-width: @desktop-width) {
     width: 134px;
@@ -55,6 +58,9 @@
 .programmes__item--fat::before {
   background-image: ~'url("../img/programmes-cat-fat.svg")';
   transform: translate(-11%, 22%);
+  @media (min-width: @tablet-width) {
+    transform: translate(10%, 34%);
+  }
 }
 
 .programmes__item::after {
@@ -71,6 +77,9 @@
     height: 200px;
     grid-column: 2;
     grid-row: 1 / 3;
+    position: relative;
+    top: 25px;
+    right: -58px;
   }
   @media (min-width: @desktop-width) {
     width: 100px;
@@ -90,6 +99,7 @@
   grid-column: 2;
   @media (min-width: @tablet-width) {
     .font(36px,36px);
+    margin: 0;
     grid-column: 1;
   }
   @media (min-width: @desktop-width) {
@@ -117,6 +127,7 @@
   @media (min-width: @tablet-width) {
     .font(16px, 24px);
     grid-column: 1;
+    max-width: 400px;
     &::after {
       display: none;
     }
@@ -136,6 +147,7 @@
   grid-column: span 2;
   position: relative;
   @media (min-width: @tablet-width) {
+    .font(20px, 24px);
     max-width: 170px;
     grid-column: 1;
   }

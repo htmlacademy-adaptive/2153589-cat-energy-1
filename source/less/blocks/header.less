@@ -34,6 +34,14 @@
   }
 }
 
+.header__logo-link--text {
+  margin-left: -8px;
+  @media (min-width: @tablet-width) {
+    padding: 31px 0;
+    margin-left: 0;
+  }
+}
+
 .header__logo-text {
   display: block;
   width: 101px;
@@ -42,10 +50,6 @@
     width: 118px;
     height: 21px;
   }
-}
-
-.header__logo-link + .header__logo-link {
-  margin-left: -8px;
 }
 
 .header__logo-link:first-child img {
