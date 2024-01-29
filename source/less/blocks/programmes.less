@@ -1,7 +1,7 @@
 .programmes__list {
   .list-reset();
   display: grid;
-  row-gap: 20px;
+  row-gap: 22px;
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(2, 1fr);
     justify-content: space-between;
@@ -15,10 +15,12 @@
   grid-template-columns: 75px 1fr;
   padding: 24px 20px 11px;
   background-color: #f2f2f2;
+  row-gap: 22px;
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 300px;
-    padding: 77px 52px 52px;
+    padding: 67px 52px 52px;
     column-gap: 19px;
+    row-gap: 22px;
   }
   @media (min-width: @desktop-width) {
     grid-template-columns: 150px 1fr;
@@ -81,12 +83,13 @@
 .programmes__item-title {
   .font(24px,37px);
   .flex-row-align();
-  margin: 0 0 0 -4px;
+  margin: 0 0 0 -5px;
   color: @text-color-thirdly;
   font-family: @font-family-secondary;
   text-transform: uppercase;
   grid-column: 2;
   @media (min-width: @tablet-width) {
+    .font(36px,36px);
     grid-column: 1;
   }
   @media (min-width: @desktop-width) {
@@ -96,17 +99,23 @@
 
 .programmes__item-desc {
   .flex-column();
-  margin: 22px 0 0;
+  color: @text-color-thirdly;
+  margin: 0 0 11px;
   grid-column: span 2;
+  position: relative;
   &::after {
     content: "";
+    position: absolute;
+    left: 0;
+    bottom: -32px;
     display: block;
     width: 100%;
     height: 1px;
     background-color: #d9d9d9;
-    margin: 23px 0 9px;
+    margin: 0 0 9px;
   }
   @media (min-width: @tablet-width) {
+    .font(16px, 24px);
     grid-column: 1;
     &::after {
       display: none;
@@ -123,7 +132,7 @@
   justify-content: flex-start;
   text-align: left;
   max-width: 140px;
-  padding: 10px 26px 10px 0;
+  padding: 9px 26px 9px 0;
   grid-column: span 2;
   position: relative;
   @media (min-width: @tablet-width) {
@@ -138,7 +147,7 @@
 .programmes__item-button::after {
   content: "";
   position: absolute;
-  right: 20px;
+  right: 15px;
   top: 50%;
   width: 24px;
   height: 12px;
@@ -147,6 +156,10 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+.programmes__item-button--pro::after {
+  right: 19px;
 }
 
 .programmes__item-button:hover::after {

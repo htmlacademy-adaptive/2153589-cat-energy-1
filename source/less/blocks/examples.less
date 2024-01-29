@@ -1,5 +1,4 @@
 .examples {
-  padding-top: 26px;
   padding-bottom: 40px;
   @media (min-width: @tablet-width) {
     padding-top: 47px;
@@ -11,6 +10,7 @@
 }
 
 .examples__wrapper {
+  padding-top: 27px;
   background-color: #eaeaea;
   @media (min-width: @tablet-width) {
     background-color: @background-color-primary;
@@ -106,6 +106,7 @@
   display: flex;
   justify-content: center;
   min-height: 256px;
+  width: 100%;
   background-color: #eaeaea;
   position: relative;
   transition: all 0.8s;
@@ -120,10 +121,11 @@
   height: 100%;
   background-color: #eaeaea;
   overflow: hidden;
+  object-fit: contain;
   img {
     display: block;
     width: 100%;
-    min-height: 100%;
+    height: 100%;
     object-fit: contain;
   }
   @media (min-width: @tablet-width) {
@@ -135,14 +137,35 @@
 
 .examples__slider-item--before {
   width: 50%;
+  height: 100%;
   position: absolute;
   left: 0;
   top: 0;
   z-index: 2;
   img {
-    object-fit: fill;
-    margin-left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 20px center;
     transition: object-fit 1.5s linear;
+    @media (min-width: 321px) and (max-width: 767px) {
+      object-fit: fill;
+      object-position: center;
+      margin-left: 50%;
+    }
+    @media (min-width: @tablet-width) {
+      object-position: 85px center;
+      margin-left: 0;
+    }
+    @media (min-width: 768px) and (max-width: 1439px) {
+      object-fit: fill;
+      object-position: center;
+      margin-left: 50%;
+    }
+    @media (min-width: 1440px) {
+      object-position: 34px center;
+      margin-left: 0;
+    }
   }
 }
 
