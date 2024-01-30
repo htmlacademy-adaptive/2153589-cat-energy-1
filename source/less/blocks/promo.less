@@ -7,7 +7,7 @@
   color: @text-color-secondary;
   padding-top: 27px;
   padding-bottom: 20px;
-  //margin-bottom: 20px;
+  margin-bottom: 20px;
   background: linear-gradient(0deg, @background-color-primary 39%, @background-color-promo 39%, @background-color-promo 100%), ~'url("../img/promo-cat-mobile.png")', linear-gradient(0deg, #4d4d53 0%, #4d4d53 100%);
   background-color: @background-color-secondary;
   background-repeat: no-repeat;
@@ -32,13 +32,15 @@
     //min-height: 600px;
     grid-template-columns: 420px 1fr;
     grid-template-rows: 71px repeat(4, auto);
+    padding-top: 27px;
     padding-left: 189px;
-    margin-bottom: 82px;
+    margin-bottom: 134px;
+    background: none;
     &::before {
       content: "";
       position: absolute;
       display: block;
-      bottom: 0;
+      bottom: -52px;
       right: 0;
       width: 50%;
       min-height: 150%;

@@ -1,6 +1,10 @@
 .features {
   padding-top: 45px;
   padding-bottom: 19px;
+  @media (min-width: @desktop-width) {
+    padding-top: 71px;
+    margin-bottom: 23px;
+  }
 }
 
 .features__title {
@@ -17,7 +21,7 @@
     column-gap: 153px;
   }
   @media (min-width: @desktop-width) {
-    grid-template-columns: repeat(4, 230px);
+    grid-template-columns: repeat(4, 244px);
     justify-content: space-between;
     column-gap: 80px;
     row-gap: 40px;
@@ -38,17 +42,26 @@
 .features__item::before {
   .font(280px, 280px);
   content: counter(feature);
-  display: block;
+  display: none;
   position: absolute;
   right: -15px;
   bottom: 5px;
   color: #e2e2e2;
   opacity: 0.3;
   font-family: @font-family-secondary;
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+  @media (min-width: @desktop-width) {
+    right: 0;
+  }
 }
 
 .features__item:first-child::before {
   right: 6px;
+  @media (min-width: @desktop-width) {
+    right: 16px;
+  }
 }
 
 .features__item-desc {

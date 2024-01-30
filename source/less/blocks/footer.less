@@ -1,8 +1,13 @@
 .footer {
+  margin: 0;
+  background-color: #f2f2f2;
   padding-top: 37px;
   padding-bottom: 37px;
-  background-color: #f2f2f2;
   color: @text-color-primary;
+  @media (min-width: @desktop-width) {
+    padding-top: 49px;
+    padding-bottom: 45px;
+  }
 }
 
 .footer__list {
