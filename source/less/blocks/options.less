@@ -2,6 +2,10 @@
   padding-top: 24px;
   padding-bottom: 35px;
   overflow: hidden;
+  @media (min-width: @tablet-width) {
+    padding-top: 69px;
+    padding-bottom: 75px;
+  }
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 245px;
@@ -11,9 +15,21 @@
 
 .options__title {
   margin: 0 0 33px;
+  @media (min-width: @tablet-width) {
+    padding-left: 40px;
+    margin: 0 0 80px;
+  }
   @media (min-width: @desktop-width) {
     grid-column: 1 / -1;
   }
+}
+
+.options__title::before {
+  left: -281px;
+}
+
+.options__title::after {
+  left: 110%;
 }
 
 .options__list {
@@ -23,6 +39,7 @@
   @media (min-width: @tablet-width) {
     border-left: 1px solid #cdcdcd;
     border-right: 1px solid #cdcdcd;
+    margin-bottom: 69px;
   }
   @media (min-width: @desktop-width) {
     margin: 0;
@@ -33,10 +50,12 @@
 
 .options__item {
   border-bottom: 1px solid #cdcdcd;
+  @media (min-width: @tablet-width) {
+    min-height: 139px;
+  }
 }
 
 .options__footer {
-  .font(16px, 20px);
   color: @text-color-secondary;
   text-align: center;
   background-image: ~'url("../img/options-back.jpg")';
@@ -49,9 +68,11 @@
   }
   @media (min-width: @tablet-width) {
     background-image: ~'url("../img/options-back-tablet.jpg")';
+    min-height: 200px;
   }
   @media (min-width: @tablet-width) and (min-resolution: 2dppx) {
     background-image: ~'url("../img/options-back-tablet@2x.jpg")';
+    min-height: 200px;
   }
   @media (min-width: @desktop-width) {
     background-image: ~'url("../img/options-back-desktop.jpg")';
@@ -62,12 +83,13 @@
 }
 
 .options__footer-wrapper {
+  .font(16px, 20px);
   width: 100%;
   min-height: 100%;
   background-color: @background-color-promo;
   padding: 58px 40px 40px;
   @media (min-width: @tablet-width) {
-    padding: 70px 77px;
+    padding: 57px 70px 63px 77px;
   }
   @media (min-width: @desktop-width) {
     padding: 60px;

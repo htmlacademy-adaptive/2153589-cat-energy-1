@@ -51,8 +51,10 @@
 }
 
 .contacts__welcome-street {
-  display: block;
-  margin-bottom: 20px;
+  @media (min-width: @tablet-width) {
+    display: block;
+    margin-bottom: 20px;
+  }
 }
 
 .contacts__map {

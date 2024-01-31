@@ -3,43 +3,52 @@
   grid-template-columns: repeat(2, 1fr);
   row-gap: 10px;
   padding: 22px 0 25px;
-  min-height: 209px;
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr;
-    padding: 10px 37px 40px;
-    background: linear-gradient(180deg, @text-color-secondary 20%, #f2f2f2 20%, #f2f2f2 100%) no-repeat top;
+    grid-template-rows: 210px repeat(3, 1fr);
+    padding: 22px 37px 27px 37px;
+    background: linear-gradient(180deg, @text-color-secondary 17%, #f2f2f2 17%, #f2f2f2 100%) no-repeat top;
   }
-  &--more {
-    grid-template-columns: 1fr;
-    text-align: center;
-    row-gap: initial;
-    @media (min-width: @tablet-width) {
-      background: none;
-    }
+}
+
+.card--more {
+  grid-template-columns: 1fr;
+  text-align: center;
+  row-gap: initial;
+  @media (min-width: @tablet-width) {
+    background: none;
+    align-items: end;
+    align-self: end;
   }
-  &--options {
-    grid-template-columns: 1fr;
-    padding: 11px 0 19px;
-    min-height: 98px;
-    @media (min-width: @tablet-width) {
-      grid-template-columns: repeat(2, 1fr);
-      justify-content: space-between;
-      column-gap: 40px;
-      padding: 26px 38px;
-      background: none;
-    }
-    @media (min-width: @desktop-width) {
-      grid-template-columns: repeat(3, 1fr);
-      align-items: center;
-      column-gap: 40px;
-      padding: 25px 0;
-    }
+}
+
+.card--options {
+  grid-template-columns: 1fr;
+  padding: 11px 0 19px;
+  min-height: 98px;
+  @media (min-width: @tablet-width) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: space-between;
+    column-gap: 60px;
+    row-gap: 4px;
+    padding: 15px 38px 13px 38px;
+    background: none;
+  }
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    column-gap: 40px;
+    padding: 25px 0;
   }
 }
 
 .card__img-wrapper {
   .flex-center();
   grid-row: span 2;
+  @media (min-width: @tablet-width) {
+    grid-row: 1;
+  }
 }
 
 .card__title {
@@ -49,18 +58,25 @@
   color: #222222;
   font-family: @font-family-secondary;
   text-transform: uppercase;
-  &--options {
-    max-width: 100%;
-    @media (min-width: @tablet-width) {
-      width: 100%;
-    }
-  }
   a {
     text-decoration: none;
     color: inherit;
   }
   @media (min-width: @tablet-width) {
+    .font(20px, 24px);
+    max-width: 135px;
     margin: 0 auto;
+    padding-top: 10px;
+    text-align: center;
+  }
+}
+
+.card__title--options {
+  max-width: 100%;
+  @media (min-width: @tablet-width) {
+    max-width: 100%;
+    text-align: left;
+    margin: 0;
   }
 }
 
@@ -68,6 +84,10 @@
   color: #111111;
   max-width: 100%;
   margin-top: 4px;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 22px;
+    max-width: 140px;
+  }
   &::before {
     content: "";
     display: block;
@@ -81,6 +101,7 @@
     @media (min-width: @tablet-width) {
       width: 60px;
       height: 60px;
+      margin-bottom: 55px;
     }
   }
 }
@@ -88,6 +109,14 @@
 .card__button {
   grid-column: 1 / -1;
   margin-top: auto;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 13px;
+  }
+  &--more {
+    @media (min-width: @tablet-width) {
+      grid-row: 4;
+    }
+  }
   &--options {
     @media (min-width: @desktop-width) {
       grid-column: 3;
@@ -99,23 +128,55 @@
 .card__specs {
   .list-reset();
   .font(12px, 16px);
+  //grid-column: 2;
+  //grid-row: 2;
+  @media (min-width: @tablet-width) {
+    .font(16px, 20px);
+    min-height: auto;
+    margin-top: -6px;
+  }
 }
 
 .card__specs-item {
   .flex(space-between, stretch);
   margin: 0;
+  padding: 0;
   @media (min-width: @tablet-width) {
     border-bottom: 1px solid #d9d9d9;
+    padding-bottom: 3px;
   }
   &--options {
     margin-bottom: 1px;
     @media (min-width: @tablet-width) {
+      .font(16px, 20px);
+      margin: 0;
+      align-items: center;
+      justify-content: flex-end;
       border: none;
+      max-width: 100%;
+      text-align: right;
     }
+  }
+}
+
+.card__specs-item:not(:last-child) {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 6px;
   }
 }
 
 .card__info {
   .font(12px, 16px);
   margin: 8px 0 21px;
+  @media (min-width: @tablet-width) {
+    .font(16px, 18px);
+    max-width: 170px;
+    margin: 0 auto 21px;
+  }
+}
+
+.card__specs-text:last-child {
+  @media (min-width: @tablet-width) {
+    margin-left: 50px;
+  }
 }

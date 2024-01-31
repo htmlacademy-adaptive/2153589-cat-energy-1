@@ -1,6 +1,10 @@
 .features {
-  padding-top: 45px;
-  padding-bottom: 19px;
+  padding-top: 23px;
+  padding-bottom: 50px;
+  @media (min-width: @tablet-width) {
+    padding-top: 45px;
+    padding-bottom: 19px;
+  }
   @media (min-width: @desktop-width) {
     padding-top: 71px;
     margin-bottom: 23px;
@@ -14,10 +18,11 @@
 .features__list {
   .list-reset();
   display: grid;
-  row-gap: 36px;
+  row-gap: 20px;
   counter-reset: feature 0;
   @media (min-width: @tablet-width) {
     grid-template-columns: repeat(auto-fit, 230px);
+    row-gap: 36px;
     column-gap: 153px;
   }
   @media (min-width: @desktop-width) {

@@ -17,9 +17,10 @@
 }
 
 .examples__wrapper {
-  padding-top: 17px;
+  padding-top: 25px;
   background-color: #eaeaea;
   @media (min-width: @tablet-width) {
+    padding-top: 17px;
     background-color: @background-color-primary;
   }
   @media (min-width: @desktop-width) {
@@ -28,7 +29,10 @@
 }
 
 .examples__title {
-  margin: 0 0 59px;
+  margin: 0 0 43px;
+  @media (min-width: @tablet-width) {
+    margin: 0 0 59px;
+  }
   @media (min-width: @desktop-width) {
     margin-bottom: 22%;
   }
@@ -105,8 +109,7 @@
 }
 
 .examples__fact:first-child {
-  margin-right: 42px;
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     margin-right: 44px;
   }
 }
