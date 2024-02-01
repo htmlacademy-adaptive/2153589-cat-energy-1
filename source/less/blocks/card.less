@@ -36,10 +36,11 @@
     background: none;
   }
   @media (min-width: @desktop-width) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
     align-items: center;
-    column-gap: 40px;
-    padding: 25px 0;
+    column-gap: 20px;
+    padding: 0;
   }
 }
 
@@ -69,6 +70,11 @@
     padding-top: 10px;
     text-align: center;
   }
+  @media (min-width: @desktop-width) {
+    .font(20px, 24px);
+    max-width: 140px;
+    padding-top: 0;
+  }
 }
 
 .card__title--options {
@@ -88,6 +94,9 @@
     margin-bottom: 22px;
     max-width: 140px;
   }
+  @media (min-width: @desktop-width) {
+    margin-bottom: 36px;
+  }
   &::before {
     content: "";
     display: block;
@@ -103,6 +112,9 @@
       height: 60px;
       margin-bottom: 55px;
     }
+    @media (min-width: @desktop-width) {
+      margin-bottom: 40px;
+    }
   }
 }
 
@@ -112,15 +124,24 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 13px;
   }
+  @media (min-width: @desktop-width) {
+    margin-bottom: 10px;
+  }
   &--more {
     @media (min-width: @tablet-width) {
       grid-row: 4;
+    }
+    @media (min-width: @desktop-width) {
+      margin-bottom: 10px;
+      padding: 10px 35px;
     }
   }
   &--options {
     @media (min-width: @desktop-width) {
       grid-column: 3;
-      max-width: 204px;
+      width: 100%;
+      max-width: 244px;
+      margin: 0 0 0 auto;
     }
   }
 }
@@ -128,12 +149,13 @@
 .card__specs {
   .list-reset();
   .font(12px, 16px);
-  //grid-column: 2;
-  //grid-row: 2;
   @media (min-width: @tablet-width) {
     .font(16px, 20px);
     min-height: auto;
     margin-top: -6px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-top: -11px;
   }
 }
 
@@ -156,12 +178,28 @@
       max-width: 100%;
       text-align: right;
     }
+    @media (min-width: @desktop-width) {
+      justify-self: center;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+    }
   }
 }
 
 .card__specs-item:not(:last-child) {
   @media (min-width: @tablet-width) {
     margin-bottom: 6px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-bottom: 8px;
+  }
+}
+
+.card__specs-item--options:not(:last-child) {
+  @media (min-width: @desktop-width) {
+    padding-top: 5px;
+    margin: 0 -34px 0 5px;
   }
 }
 
@@ -173,10 +211,20 @@
     max-width: 170px;
     margin: 0 auto 21px;
   }
+  @media (min-width: @desktop-width) {
+    margin: -11px auto 31px;
+  }
 }
 
-.card__specs-text:last-child {
+.card__specs-text + .card__specs-text {
   @media (min-width: @tablet-width) {
     margin-left: 50px;
   }
 }
+
+.card__specs-text--options {
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
+}
+

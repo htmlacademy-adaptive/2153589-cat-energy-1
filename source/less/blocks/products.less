@@ -7,6 +7,9 @@
     border: none;
     padding-top: 50px;
   }
+  @media (min-width: @desktop-width) {
+    padding-top: 62px;
+  }
 }
 
 .products__title {
@@ -29,7 +32,8 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-content: space-between;
-    row-gap: 80px;
+    row-gap: 56px;
+    column-gap: 79px;
   }
 }
 
@@ -48,5 +52,10 @@
     max-height: calc(511px - 15%);
     padding: 22px 37px 27px 37px;
     border: 2px solid #f2f2f2;
+  }
+  @media (min-width: @desktop-width) {
+    min-height: calc(511px - 16%);
+    max-height: calc(511px - 16%);
+    padding: 22px 37px 27px 37px;
   }
 }
