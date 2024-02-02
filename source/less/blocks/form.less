@@ -7,18 +7,29 @@
   overflow: hidden;
   @media (min-width: @tablet-width) {
     border-top: none;
+    padding-top: 51px;
+    padding-bottom: 59px;
+    padding-left: 70px;
   }
 }
 
 .form__title {
   margin: 0 0 35px;
   text-transform: initial;
+  @media (min-width: @tablet-width) {
+    margin: 0 0 53px;
+  }
 }
 
 .form__desc {
   max-width: 80%;
   color: @text-color-thirdly;
   margin: 0 0 14px;
+  @media (min-width: @tablet-width) {
+    .font(20px, 30px);
+    max-width: 330px;
+    margin: 0 0 42px;
+  }
 }
 
 .form__field {
@@ -27,6 +38,9 @@
   padding: 0;
   &--cat {
     padding: 24px 0 8px;
+    @media (min-width: @tablet-width) {
+      padding: 24px 0 55px;
+    }
   }
   &--program {
     padding: 22px 0 19px;
@@ -35,10 +49,14 @@
     @media (min-width: @tablet-width) {
       border: 1px solid #d9d9d9;
       padding: 23px 27px;
+      margin-bottom: 67px;
     }
   }
   &--owner {
     margin-bottom: 11px;
+    @media (min-width: @tablet-width) {
+      margin-bottom: 47px;
+    }
     @media (min-width: @desktop-width) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -48,9 +66,15 @@
   }
   &--comment {
     margin-bottom: 52px;
+    @media (min-width: @tablet-width) {
+      margin-bottom: 65px;
+    }
   }
   &--add {
     margin-bottom: 32px;
+    @media (min-width: @tablet-width) {
+      margin-bottom: 52px;
+    }
   }
 }
 
@@ -62,17 +86,31 @@
     max-width: 187px;
     @media (min-width: @tablet-width) {
       max-width: fit-content;
+      margin: 0 0 76px;
     }
   }
   &--owner::after {
-    top: 33%;
     left: 110%;
+    @media (min-width: @tablet-width) {
+      left: 107%;
+    }
   }
   &--comment {
     margin: 0 0 38px;
+    @media (min-width: @tablet-width) {
+      margin: 0 0 88px;
+    }
+  }
+  &--comment::after {
+    @media (min-width: @tablet-width) {
+      left: 123%;
+    }
   }
   &--add {
     margin-bottom: 36px;
+    @media (min-width: @tablet-width) {
+      margin-bottom: 57px;
+    }
   }
 }
 
@@ -89,19 +127,12 @@
     width: 17px;
     height: 17px;
   }
+  @media (min-width: @tablet-width) {
+    .font(20px,30px);
+    margin-bottom: 19px;
+    max-width: 94%;
+  }
 }
-
-//.form__label--mail {
-//  svg {
-//    background: transparent ~'url("../img/mail-icon.svg")' no-repeat center / 100%;
-//  }
-//}
-
-//.form__label--tel {
-//  svg {
-//    background: transparent ~'url("../img/tel-icon.svg")' no-repeat center / 100%;
-//  }
-//}
 
 .form__input,
 .form__comment {
@@ -114,11 +145,19 @@
   border: none;
   outline: 1px solid #e7e7e7;
   flex-grow: 1;
+  @media (min-width: @tablet-width) {
+    .font(20px,30px);
+    padding: 11px 40px 11px 20px;
+  }
 }
 
 .form__input[type="email"],
 .form__input[type="tel"] {
   padding: 15px 40px 12px 15px;
+  @media (min-width: @tablet-width) {
+    .font(20px,30px);
+    padding: 11px 40px 11px 20px;
+  }
 }
 
 .form__comment {
@@ -127,6 +166,9 @@
   font-family: @font-family-secondary;
   margin: 0;
   padding: 14px 14px 14px 15px;
+  @media (min-width: @tablet-width) {
+    padding: 11px 40px 11px 20px;
+  }
 }
 
 .form__input + svg {
@@ -185,8 +227,10 @@
   width: 100%;
   margin-bottom: 21px;
   @media (min-width: @tablet-width) {
+    .font(20px, 26px);
     max-width: 284px;
     margin: 0;
+    padding: 14px 65px;
   }
 }
 
@@ -198,7 +242,10 @@
   text-transform: initial;
   text-align: center;
   @media (min-width: @tablet-width) {
+    .font(16px, 16px);
     text-align: left;
+    padding-top: 16px;
+    margin-left: -3px;
   }
 }
 
@@ -224,19 +271,21 @@
   }
 }
 
-@media (max-width: @tablet-width) {
-  .form__field--program::before,
-  .form__field--program::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -110px;
-    width: 200vw;
-    height: 1px;
-    background-color: #d9d9d9;
-    z-index: 2;
+.form__field--program::before,
+.form__field--program::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -110px;
+  width: 200vw;
+  height: 1px;
+  background-color: #d9d9d9;
+  z-index: 2;
+  @media (min-width: @tablet-width) {
+    display: none;
   }
-  .form__field--program::after {
-    top: 100%;
-  }
+}
+
+.form__field--program::after {
+  top: 100%;
 }

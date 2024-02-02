@@ -4,6 +4,9 @@
 
 .custom__label {
   .font(16px, 18px);
+  @media (min-width: @tablet-width) {
+    .font(20px, 30px);
+  }
 }
 
 .custom__input {
@@ -24,9 +27,18 @@
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 3;
+    @media (min-width: @tablet-width) {
+      width: 40px;
+      height: 40px;
+    }
   }
   &[type="radio"]::after {
     border-radius: 50%;
+  }
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+    margin: 0 19px 0 0;
   }
 }
 
@@ -42,6 +54,9 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 17px, 100%;
+  @media (min-width: @tablet-width) {
+    background-size: 18px, 100%;
+  }
 }
 
 .custom__input:not(:disabled):hover::after {
