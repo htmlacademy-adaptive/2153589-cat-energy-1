@@ -14,11 +14,13 @@ const dragX = (event) => {
         if ((el.offsetLeft + e.movementX) >= 0 && (el.offsetLeft + e.movementX) <= parentCoords.width) {
             el.style.left = `${el.offsetLeft + e.movementX}px`;
             catBefore.style.width = parseInt(el.style.left) + "px";
+            catBeforeImage.style.objectPosition = "center";
 
             if ((el.offsetLeft + e.movementX) > initPosition) {
 
                 if ((el.offsetLeft + e.movementX) > (parentCoords.width - parentCoords.width / 3)) {
-                    catBeforeImage.style.objectFit = "contain";
+                    catBeforeImage.style.objectFit = "fill";
+                    catBeforeImage.style.objectPosition = "center";
                 }
                 catBeforeImage.style.marginLeft = (parentCoords.width - parseInt(el.style.left)) / parentCoords.width * 100 + "%";
             } else if ((el.offsetLeft + e.movementX) <= initPosition) {

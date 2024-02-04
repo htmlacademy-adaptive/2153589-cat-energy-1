@@ -11,16 +11,17 @@
   }
   @media (min-width: @tablet-width) {
     padding-top: 61px;
-    padding-bottom: 61px;
+    padding-bottom: 47px;
+    padding-left: 69px;
   }
   @media (min-width: @desktop-width) {
     position: absolute;
-    top: 50%;
+    top: 95px;
     left: 110px;
-    transform: translateY(-50%);
     z-index: 1;
     max-width: 565px;
-    padding: 50px 60px;
+    min-height: 199px;
+    padding: 61px 78px 46px 80px;
     background-color: @background-color-primary;
   }
 }
@@ -32,6 +33,9 @@
   font-family: @font-family-secondary;
   text-transform: uppercase;
   margin: 0 0 15px 0;
+  @media (min-width: @tablet-width) {
+    .font(20px, 26px);
+  }
 }
 
 .contacts__welcome-address {
@@ -40,13 +44,22 @@
   font-style: normal;
   margin: 0;
   padding: 0;
-  @media (min-width: 768px) {
+  @media (min-width: @tablet-width) {
+    .font(16px, 20px);
     text-align: right;
+  }
+}
+
+.contacts__welcome-street {
+  @media (min-width: @tablet-width) {
+    display: block;
+    margin-bottom: 20px;
   }
 }
 
 .contacts__map {
   min-height: 362px;
+  margin: 0 auto;
   color: @text-color-primary;
   padding: 0;
   background-color: #eaeaea;
@@ -57,5 +70,8 @@
     min-height: 100%;
     object-fit: cover;
     object-position: center;
+  }
+  @media (min-width: @tablet-width) {
+    min-height: 400px;
   }
 }

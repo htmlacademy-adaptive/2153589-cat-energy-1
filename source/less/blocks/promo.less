@@ -6,12 +6,11 @@
   font-family: @font-family-secondary;
   color: @text-color-secondary;
   padding-top: 27px;
-  padding-bottom: 52px;
   margin-bottom: 20px;
-  background: linear-gradient(0deg, @background-color-primary 30%, @background-color-promo 30%, @background-color-promo 100%), ~'url("../img/promo-cat-mobile.png")', linear-gradient(0deg, #4d4d53 0%, #4d4d53 100%);
+  background: linear-gradient(0deg, @background-color-primary 37%, @background-color-promo 37%, @background-color-promo 100%), ~'url("../img/promo-cat-mobile.png")', linear-gradient(0deg, #4d4d53 0%, #4d4d53 100%);
   background-color: @background-color-secondary;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center, top, center;
   background-size: cover, contain, cover;
   z-index: 2;
   position: relative;
@@ -23,19 +22,24 @@
     background-size: cover;
     text-align: left;
     display: grid;
-    padding-left: 90px;
+    padding-left: 120px;
+    padding-top: 50px;
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
   @media (min-width: @desktop-width) {
     //min-height: 600px;
     grid-template-columns: 420px 1fr;
     grid-template-rows: 71px repeat(4, auto);
+    padding-top: 27px;
     padding-left: 189px;
-    margin-bottom: 82px;
+    margin-bottom: 134px;
+    background: none;
     &::before {
       content: "";
       position: absolute;
       display: block;
-      bottom: 0;
+      bottom: -52px;
       right: 0;
       width: 50%;
       min-height: 150%;
@@ -61,6 +65,7 @@
     color: @text-color-thirdly;
     grid-column: 1;
     grid-row: 1;
+    margin-bottom: 40px;
   }
   @media (min-width: @desktop-width) {
     margin: 0 0 41px;
@@ -85,10 +90,13 @@
 }
 
 .promo__picture {
+  margin-left: 20px;
   @media (min-width: @tablet-width) {
     grid-column: 1;
     grid-row: 3;
     z-index: -1;
+    margin-top: -30px;
+    margin-left: -68px;
   }
   @media (min-width: @desktop-width) {
     margin: 0;
@@ -118,6 +126,7 @@
 
 .promo__button {
   width: 100%;
+  padding: 11px 26px;
   @media (min-width: @tablet-width) {
     .font(20px, 26px);
     max-width: 244px;

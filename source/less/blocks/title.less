@@ -9,26 +9,33 @@
   }
   &--form {
     .font(36px, 40px);
+    @media (min-width: @tablet-width) {
+      .font(60px, 60px);
+    }
   }
-  &--decor {
-    .font(24px, 26px);
-    width: fit-content;
-    position: relative;
-    &::after,
-    &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      left: 109%;
-      top: 57%;
-      transform: translateY(-50%);
-      width: 1800px;
-      height: 2px;
-      background-color: @background-color-secondary;
-    }
-    &::before {
-      left: -300px;
-      width: 280px;
-    }
+}
+
+.title--decor {
+  .font(24px, 26px);
+  width: fit-content;
+  position: relative;
+  @media (min-width: @tablet-width) {
+    .font(36px, 36px);
+  }
+  &::after,
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 109%;
+    top: 65%;
+    transform: translateY(-50%);
+    width: 1800px;
+    height: 2px;
+    background-color: @background-color-secondary;
+  }
+  &::before {
+    left: -300px;
+    width: 280px;
   }
 }
