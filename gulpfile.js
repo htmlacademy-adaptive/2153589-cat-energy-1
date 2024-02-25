@@ -12,7 +12,8 @@ import squoosh from 'gulp-squoosh';
 // import svgstore from 'gulp-svgstore';
 import {deleteAsync} from 'del';
 import htmlmin from 'gulp-htmlmin';
-import imagemin, {mozjpeg, optipng} from 'gulp-imagemin';
+import imagemin, {mozjpeg, optipng, svgo} from 'gulp-imagemin';
+import { stacksvg } from "gulp-stacksvg";
 
 // Styles
 
@@ -68,13 +69,24 @@ export const createWebp = () => {
 
 // SVG
 
-// const svg = () =>
-//     gulp.src(['source/img/*.svg', '!source/img/icons/*.svg'])
-//         .pipe(svgo())
-//         .pipe(gulp.dest('build/img'));
-//
+export const svg = () =>
+    gulp.src(['source/img/**/*.svg', '!source/img/favicons/*.svg'])
+        .pipe(imagemin([svgo({
+          plugins: [
+            {
+              name: 'removeViewBox',
+              active: false
+            },
+            {
+              name: 'cleanupIDs',
+              active: false
+            }
+          ]
+        })]))
+        .pipe(gulp.dest('build/img'));
+
 // const sprite = () => {
-//   return gulp.src('source/img/icons/*.svg')
+//   return gulp.src(['source/img/*.svg','!source/img/logo/*.svg','!source/img/favicons/*.svg'])
 //       .pipe(svgo())
 //       .pipe(svgstore({
 //         inlineSvg: true
@@ -83,6 +95,12 @@ export const createWebp = () => {
 //       .pipe(gulp.dest('build/img'));
 // };
 
+export const stack =() =>{
+    return gulp.src(['source/img/*.svg','!source/img/logo/*.svg','!source/img/favicons/*.svg'])
+        .pipe(stacksvg({ output: 'stack',separator:'__', spacer:'-'}))
+        .pipe(gulp.dest('build/img'))
+};
+
 // Copy
 
 export const copy = (done) => {
@@ -90,6 +108,7 @@ export const copy = (done) => {
     'source/fonts/**/*.{woff2,woff}',
     'source/*.ico',
     'source/*.webmanifest',
+    'source/img/favicons/*.{png,svg}',
   ], {
     base: 'source'
   })
@@ -153,17 +172,16 @@ const watcher = () => {
 // Default
 
 export default gulp.series(
-//     clean,
-//     copy,
-//     copyImages,
-//     gulp.parallel(
-//         styles,
-//         html,
-//         scripts,
-//         svg,
-//         sprite,
-//         createWebp
-//     ),
+    clean,
+    copy,
+    gulp.parallel(
+        styles,
+        html,
+        scripts,
+        svg,
+        stack,
+        createWebp
+    ),
     gulp.series(
         server,
         watcher
