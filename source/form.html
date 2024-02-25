@@ -21,15 +21,15 @@
     <header class="header container">
       <a class="header__logo-link" href="index.html">
         <picture>
-          <source media="(min-width: 1200px)" srcset="img/logo-image-desktop.svg" width="70" height="59">
-          <source media="(min-width: 768px)" srcset="img/logo-image-tablet.svg"  width="60" height="50">
-          <img class="header__logo-image" src="img/logo-image-mobile.svg" alt="Cat Energy." width="33" height="38">
+          <source media="(min-width: 1200px)" srcset="img/logo/logo-image-desktop.svg" width="70" height="59">
+          <source media="(min-width: 768px)" srcset="img/logo/logo-image-tablet.svg" width="60" height="50">
+          <img class="header__logo-image" src="img/logo/logo-image-mobile.svg" alt="Cat Energy." width="33" height="38">
         </picture>
       </a>
       <a class="header__logo-link header__logo-link--text" href="index.html">
         <img
                 class="header__logo-text"
-                src="img/logo-text.svg"
+                src="img/logo/logo-text.svg"
                 alt="Cat Energy - функциональное питание для котов."
                 width="101"
                 height="18"
@@ -236,6 +236,9 @@
         </div>
         <div class="contacts__map" id="map">
           <picture>
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/contacts-map-desktop.webp 1x, img/contacts-map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/contacts-map-tablet.webp 1x, img/contacts-map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/contacts-map.webp 1x, img/contacts-map@2x.webp 2x">
             <source media="(min-width: 1200px)" srcset="img/contacts-map-desktop.jpg 1x, img/contacts-map-desktop@2x.jpg 2x" width="1440" height="400">
             <source media="(min-width: 768px)" srcset="img/contacts-map-tablet.jpg 1x, img/contacts-map-tablet@2x.jpg 2x" width="768" height="400">
             <img
@@ -255,7 +258,7 @@
           <a class="footer__logo-link" href="index.html">
             <img
                     class="footer__logo-text"
-                    src="img/logo-text.svg"
+                    src="img/logo/logo-text.svg"
                     alt="Cat Energy - функциональное питание для котов."
                     width="128"
                     height="24"
