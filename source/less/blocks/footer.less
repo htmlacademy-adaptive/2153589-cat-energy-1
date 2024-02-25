@@ -64,11 +64,33 @@
   .flex-center();
   width: 28px;
   height: 26px;
-  &:hover svg {
-    stroke: @background-color-secondary;
-  }
   &:active {
     opacity: 0.3;
+  }
+}
+
+.footer__socials-link--vkontakte {
+  mask-image: ~'url("../img/stack.svg#vkontakte")';
+  background-color: #666666;
+  &:hover {
+    background-color: @background-color-secondary;
+  }
+}
+
+.footer__socials-link--youtube {
+  mask-image: ~'url("../img/stack.svg#youtube")';
+  background-color: #666666;
+  &:hover {
+    background-color: @background-color-secondary;
+  }
+}
+.footer__socials-link--telegram {
+  mask-image: ~'url("../img/stack.svg#telegram")';
+  background-color: #666666;
+  height: 20px;
+  width: 22px;
+  &:hover {
+    background-color: @background-color-secondary;
   }
 }
 
@@ -89,8 +111,9 @@
 
 .footer__dev-link {
   padding-top: 2px;
-  &:hover svg {
-    stroke: @background-color-secondary;
+  color: #666666;
+  &:hover {
+    color: @background-color-secondary;
   }
   &:active {
     opacity: 0.3;
