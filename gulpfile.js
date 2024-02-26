@@ -9,8 +9,11 @@ import terser from 'gulp-terser';
 import squoosh from 'gulp-squoosh';
 import { deleteAsync } from 'del';
 import htmlmin from 'gulp-htmlmin';
+import debug from 'gulp-debug';
 import imagemin, { mozjpeg, optipng, svgo } from 'gulp-imagemin';
 import { stacksvg } from "gulp-stacksvg";
+
+
 
 // Styles
 
@@ -52,6 +55,7 @@ export const optimizePngJpg = () => {
             mozjpeg({ quality: 75, progressive: true }),
             optipng({ optimizationLevel: 5 })
         ]))
+        .pipe(debug({title: 'optimizePngJpg'}))
         .pipe(gulp.dest('build/img'))
 };
 
@@ -94,6 +98,7 @@ export const optimizeSvgFavicons = () => {
                 ]
             })
         ]))
+        .pipe(debug({title: 'imagemin-optimize-favicons-svg'}))
         .pipe(gulp.dest('build/img/favicons'))
 };
 
@@ -225,4 +230,3 @@ export default gulp.series(
         server,
         watcher
     ));
-

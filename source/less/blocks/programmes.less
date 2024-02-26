@@ -16,12 +16,12 @@
 .programmes__item {
   display: grid;
   grid-template-columns: 75px 1fr;
-  padding: 24px 20px 11px;
+  padding: 24px 18px 11px 20px;
   background-color: #f2f2f2;
   row-gap: 22px;
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 270px;
-    padding: 68px 52px 52px;
+    padding: 68px 52px 52px 51px;
     row-gap: 12px;
   }
   @media (min-width: @desktop-width) {
@@ -60,9 +60,9 @@
 
 .programmes__item--fat::before {
   background-image: ~'url("../img/stack.svg#programmes-cat-fat")';
-  transform: translate(-11%, 22%);
+  transform: translate(-11%, -3%);
   @media (min-width: @tablet-width) {
-    transform: translate(10%, 34%);
+    transform: translate(10%, 12%);
   }
   @media (min-width: @desktop-width) {
     transform: translate(-12%, 24%);
