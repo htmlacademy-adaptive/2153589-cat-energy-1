@@ -28,11 +28,14 @@
     display: block;
     position: absolute;
     left: 109%;
-    top: 65%;
+    top: 56%;
     transform: translateY(-50%);
     width: 1800px;
     height: 2px;
     background-color: @background-color-secondary;
+    @media (min-width: @tablet-width) {
+      top: 65%;
+    }
   }
   &::before {
     left: -300px;
