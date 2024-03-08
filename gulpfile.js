@@ -213,18 +213,10 @@ export const build = gulp.series(
 // Default
 
 export default gulp.series(
-    clean,
-    copy,
     gulp.parallel(
         styles,
         html,
-        scripts,
-        optimizePngJpg,
-        optimizeFavicons,
-        optimizeSvgLogo,
-        optimizeSvgFavicons,
-        stack,
-        createWebp
+        scripts
     ),
     gulp.series(
         server,

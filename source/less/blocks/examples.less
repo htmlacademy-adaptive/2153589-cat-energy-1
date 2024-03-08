@@ -2,8 +2,10 @@
   min-height: 613px;
   padding-bottom: 40px;
   @media (min-width: @tablet-width) {
-    padding-top: 47px;
+    padding-top: 28px;
     padding-bottom: 101px;
+    background: linear-gradient(180deg, @text-color-secondary 154px, #eaeaea 154px, #eaeaea 100%) no-repeat top;
+    background-size: cover;
   }
   @media (min-width: @desktop-width) {
     display: grid;
@@ -11,8 +13,8 @@
     padding-top: 0;
     padding-bottom: 52px;
     min-height: 598px;
-    background: linear-gradient(180deg, @text-color-secondary 154px, #eaeaea 154px, #eaeaea 100%) no-repeat top;
-    background-size: cover;
+    //background: linear-gradient(180deg, @text-color-secondary 154px, #eaeaea 154px, #eaeaea 100%) no-repeat top;
+    //background-size: cover;
   }
 }
 
@@ -75,9 +77,10 @@
   margin: 34px 0 0;
   @media (min-width: @tablet-width) {
     .font(20px, 28px);
-    flex-basis: 27%;
-    max-width: 174px;
+    flex-basis: 28%;
+    max-width: 175px;
     text-align: right;
+    padding-top: 4px;
     margin: 0 0 0 auto;
   }
   @media (min-width: @desktop-width) {
@@ -92,15 +95,17 @@
 
 .examples__fact {
   margin: 0;
-  flex-basis: 44%;
-  padding: 15px 20px;
+  //flex-basis: 44%;
+  min-width: 124px;
+  padding: 15px 12px;
   outline: 3px solid #cdcdcd;
   background-color: inherit;
   border-radius: 4px;
   position: relative;
   @media (min-width: @tablet-width) {
-    flex-basis: 23%;
-    padding: 15px 15px;
+    //flex-basis: 23%;
+    min-width: 162px;
+    padding: 16px 12px;
   }
   @media (min-width: @desktop-width) {
     flex-basis: 24%;
@@ -179,7 +184,7 @@
     object-fit: contain;
   }
   @media (min-width: @tablet-width) {
-    background: linear-gradient(180deg, @text-color-secondary 30%, #eaeaea 30%, #eaeaea 100%) no-repeat top;
+    background: linear-gradient(180deg, @text-color-secondary 29%, #eaeaea 29%, #eaeaea 100%) no-repeat top;
     background-size: cover;
     height: 100%;
   }
