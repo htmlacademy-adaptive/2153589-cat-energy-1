@@ -10,9 +10,7 @@ import terser from 'gulp-terser';
 import squoosh from 'gulp-squoosh';
 import {deleteAsync} from 'del';
 import htmlmin from 'gulp-htmlmin';
-import svgstore from "gulp-svgstore";
 import svgo from "gulp-svgmin";
-import rename from "gulp-rename";
 import {stacksvg} from "gulp-stacksvg";
 
 
