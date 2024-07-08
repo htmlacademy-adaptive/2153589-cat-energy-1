@@ -21,15 +21,15 @@
     <header class="header container">
       <a class="header__logo-link" href="#">
         <picture>
-          <source media="(min-width: 1200px)" srcset="img/logo-image-desktop.svg" width="70" height="59">
-          <source media="(min-width: 768px)" srcset="img/logo-image-tablet.svg"  width="60" height="50">
-          <img class="header__logo-image" src="img/logo-image-mobile.svg" alt="Cat Energy." width="33" height="38">
+          <source media="(min-width: 1200px)" srcset="img/logo/logo-image-desktop.svg" width="70" height="59">
+          <source media="(min-width: 768px)" srcset="img/logo/logo-image-tablet.svg" width="60" height="50">
+          <img class="header__logo-image" src="img/logo/logo-image-mobile.svg" alt="Cat Energy." width="33" height="38">
         </picture>
       </a>
       <a class="header__logo-link header__logo-link--text" href="#">
         <img
           class="header__logo-text"
-          src="img/logo-text.svg"
+          src="img/logo/logo-text.svg"
           alt="Cat Energy - функциональное питание для котов."
           width="101"
           height="18"
@@ -72,9 +72,9 @@
           <p class="promo__slogan">Занялся собой? Займись котом!</p>
           <div class="promo__picture">
             <picture>
-              <source type="image/webp" media="(min-width: 1200px)" srcset="img/webp/promo-image-desktop.webp 1x, img/webp/promo-image-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/promo-image-tablet.webp 1x, img/webp/promo-image-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/webp/promo-image-mobile.webp 1x, img/webp/promo-image-mobile@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/promo-image-desktop.webp 1x, img/promo-image-desktop@2x.webp 2x" width="522" height="499">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/promo-image-tablet.webp 1x, img/promo-image-tablet@2x.webp 2x" width="709" height="609">
+              <source type="image/webp" srcset="img/promo-image-mobile.webp 1x, img/promo-image-mobile@2x.webp 2x" width="280" height="270">
               <source media="(min-width: 1200px)" srcset="img/promo-image-desktop.png 1x, img/promo-image-desktop@2x.png 2x" width="522" height="499">
               <source media="(min-width: 768px)" srcset="img/promo-image-tablet.jpg 1x, img/promo-image-tablet@2x.jpg 2x" width="709" height="609">
               <img
@@ -107,8 +107,7 @@
           <li class="programmes__item programmes__item--fat">
             <h3 class="programmes__item-title">Набор массы</h3>
             <p class="programmes__item-desc">
-              Заработать авторитет среди дворовых котов<br>и даже собак?
-              Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
+              Заработать авторитет среди дворовых котов и даже собак? <br><span class="space">&nbsp;</span> Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
             </p>
             <a class="programmes__item-button programmes__item-button--pro button" href="catalog.html#pro">
               каталог pro
@@ -171,6 +170,8 @@
         <div class="examples__slider" id="drag-target">
           <div class="examples__slider-item examples__slider-item--before">
             <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/examples-cat-fat-desktop.webp 1x, img/examples-cat-fat-desktop@2x.webp 2x" width="560" height="512">
+              <source type="image/webp" srcset="img/examples-cat-fat-mobile.webp 1x, img/examples-cat-fat-mobile@2x.webp 2x" width="280" height="256">
               <source media="(min-width: 768px)" srcset="img/examples-cat-fat-desktop.png 1x, img/examples-cat-fat-desktop@2x.png 2x" width="560" height="512">
               <img
                       src="img/examples-cat-fat-mobile.png"
@@ -183,6 +184,8 @@
           </div>
           <div class="examples__slider-item examples__slider-item--after">
             <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/examples-cat-thin-desktop.webp 1x, img/examples-cat-thin-desktop@2x.webp 2x" width="560" height="512">
+              <source type="image/webp" srcset="img/examples-cat-thin-mobile.webp 1x, img/examples-cat-thin-mobile@2x.webp 2x" width="280" height="256">
               <source media="(min-width: 768px)" srcset="img/examples-cat-thin-desktop.png 1x, img/examples-cat-thin-desktop@2x.png 2x" width="560" height="512">
               <img
                       src="img/examples-cat-thin-mobile.png"
@@ -195,9 +198,6 @@
           </div>
           <button class="examples__slider-controls" id="drag-item">
             <span class="visually-hidden">Потянуть вправо или влево для смены картинки.</span>
-            <svg aria-hidden="true" focusable="false" width="40" height="40" fill="none">
-              <use href="img/sprite.svg#slider-btn"></use>
-            </svg>
           </button>
         </div>
       </section>
@@ -214,16 +214,11 @@
         </div>
         <div class="contacts__map" id="map">
           <picture>
-            <source
-                  media="(min-width: 1200px)"
-                  srcset="img/contacts-map-desktop.jpg 1x, img/contacts-map-desktop@2x.jpg 2x"
-                  width="1440"
-                  height="400">
-            <source
-                  media="(min-width: 768px)"
-                  srcset="img/contacts-map-tablet.jpg 1x, img/contacts-map-tablet@2x.jpg 2x"
-                  width="768"
-                  height="400">
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/contacts-map-desktop.webp 1x, img/contacts-map-desktop@2x.webp 2x" width="1440" height="400">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/contacts-map-tablet.webp 1x, img/contacts-map-tablet@2x.webp 2x" width="768" height="400">
+            <source type="image/webp" srcset="img/contacts-map.webp 1x, img/contacts-map@2x.webp 2x" width="320" height="362">
+            <source media="(min-width: 1200px)" srcset="img/contacts-map-desktop.jpg 1x, img/contacts-map-desktop@2x.jpg 2x" width="1440" height="400">
+            <source media="(min-width: 768px)" srcset="img/contacts-map-tablet.jpg 1x, img/contacts-map-tablet@2x.jpg 2x" width="768" height="400">
             <img
                   src="img/contacts-map.jpg"
                   srcset="img/contacts-map@2x.jpg 2x"
@@ -241,7 +236,7 @@
           <a class="footer__logo-link" href="#">
             <img
               class="footer__logo-text"
-              src="img/logo-text.svg"
+              src="img/logo/logo-text.svg"
               alt="Cat Energy - функциональное питание для котов."
               width="128"
               height="24"
@@ -251,27 +246,18 @@
         <li class="footer__item">
           <ul class="footer__socials">
             <li class="footer__socials-item">
-              <a class="footer__socials-link" href="https://vk.com/htmlacademy">
+              <a class="footer__socials-link footer__socials-link--vkontakte" href="https://vk.com/htmlacademy">
                 <span class="visually-hidden">Присоединяйтесь к нам Vkontakte.</span>
-                <svg class="footer__socials-image" aria-hidden="true" focusable="false" fill="none">
-                  <use href="img/sprite.svg#vkontakte"></use>
-                </svg>
               </a>
             </li>
             <li class="footer__socials-item">
-              <a class="footer__socials-link" href="https://www.youtube.com/user/htmlacademyru">
+              <a class="footer__socials-link footer__socials-link--youtube" href="https://www.youtube.com/user/htmlacademyru">
                 <span class="visually-hidden">Смотрите нас на Youtube.</span>
-                <svg class="footer__socials-image" aria-hidden="true" focusable="false" width="24" height="19" fill="none">
-                  <use href="img/sprite.svg#youtube"></use>
-                </svg>
               </a>
             </li>
             <li class="footer__socials-item">
-              <a class="footer__socials-link" href="https://t.me/htmlacademy">
+              <a class="footer__socials-link footer__socials-link--telegram" href="https://t.me/htmlacademy">
                 <span class="visually-hidden">Присоединяйтесь к нам в Telegram.</span>
-                <svg class="footer__socials-image" aria-hidden="true" focusable="false" width="20" height="18" fill="none">
-                  <use href="img/sprite.svg#telegram"></use>
-                </svg>
               </a>
             </li>
           </ul>
@@ -280,9 +266,7 @@
           <a class="footer__dev-text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           <a class="footer__dev-link" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="visually-hidden">Разработчик сайта-HTML Academy.</span>
-          <svg class="footer__dev-image" aria-hidden="true" focusable="false" width="27" height="34" fill="none">
-            <use href="img/sprite.svg#developer"></use>
-          </svg>
+            <svg class="footer__dev-image" aria-hidden="true" focusable="false" width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.6426 0.515754L13.5 0.5L0 1.90733V26.5129L13.5 34.5L27 26.5129V1.90733L13.6426 0.515754ZM25.2344 25.5151L13.5 32.4573L1.76561 25.5151V15.4293L13.4507 22.3451L13.4701 23.5984L5.45351 18.8548L5.44295 20.0801L13.4894 24.8885L13.5088 26.175L5.46408 21.4174L5.45351 22.6427L13.5 27.4511L21.6239 22.6182V21.3929V17.409L25.2432 15.2595L25.2344 25.5151ZM25.2344 13.9519L22.0147 15.8319L20.5325 16.7071L13.4666 12.5201L13.456 13.7454L19.4957 17.318L19.4429 17.3495L19.3126 17.4247L18.4536 17.9166L13.4666 14.9689L13.456 16.1942L17.3921 18.5222L16.4591 19.1314L16.438 19.1436L13.4666 17.402L13.456 18.6273L15.4029 19.7615L13.4155 20.9483L1.7973 14.0762L13.4349 7.11831L25.2344 13.9519ZM25.2344 12.7266L13.4401 5.81075L1.76561 12.7196V3.4897L13.5 2.26442L25.2344 3.4897V12.7266Z" fill="currentColor"/></svg>
           </a>
         </li>
       </ul>

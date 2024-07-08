@@ -31,8 +31,8 @@
     grid-template-rows: repeat(2, 1fr);
     justify-content: space-between;
     column-gap: 60px;
-    row-gap: 4px;
-    padding: 15px 38px 13px 38px;
+    row-gap: 0;
+    padding: 14px 38px 15px 38px;
     background: none;
   }
   @media (min-width: @desktop-width) {
@@ -102,7 +102,7 @@
     display: block;
     width: 30px;
     height: 30px;
-    background-image: ~'url("../img/add.svg")';
+    background-image: ~'url("../img/stack.svg#add")';
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
@@ -152,7 +152,7 @@
   @media (min-width: @tablet-width) {
     .font(16px, 20px);
     min-height: auto;
-    margin-top: -6px;
+    margin-top: -8px;
   }
   @media (min-width: @desktop-width) {
     margin-top: -11px;
@@ -166,7 +166,9 @@
   @media (min-width: @tablet-width) {
     border-bottom: 1px solid #d9d9d9;
     padding-bottom: 3px;
+    padding-right: 3px;
   }
+
   &--options {
     margin-bottom: 1px;
     @media (min-width: @tablet-width) {
@@ -189,7 +191,7 @@
 
 .card__specs-item:not(:last-child) {
   @media (min-width: @tablet-width) {
-    margin-bottom: 6px;
+    margin-bottom: 7px;
   }
   @media (min-width: @desktop-width) {
     margin-bottom: 8px;
