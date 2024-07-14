@@ -26,6 +26,7 @@
   grid-template-columns: 1fr;
   padding: 11px 0 19px;
   min-height: 98px;
+  row-gap: 0;
   @media (min-width: @tablet-width) {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -79,6 +80,7 @@
 
 .card__title--options {
   max-width: 100%;
+  margin-bottom: 9px;
   @media (min-width: @tablet-width) {
     max-width: 100%;
     text-align: left;
@@ -89,7 +91,7 @@
 .card__title--more {
   color: #111111;
   max-width: 100%;
-  margin-top: 4px;
+  margin-top: 5px;
   @media (min-width: @tablet-width) {
     margin-bottom: 22px;
     max-width: 140px;
@@ -137,6 +139,7 @@
     }
   }
   &--options {
+    margin-top: auto;
     @media (min-width: @desktop-width) {
       grid-column: 3;
       width: 100%;
@@ -170,7 +173,7 @@
   }
 
   &--options {
-    margin-bottom: 1px;
+    margin-bottom: 12px;
     @media (min-width: @tablet-width) {
       .font(16px, 20px);
       margin: 0;

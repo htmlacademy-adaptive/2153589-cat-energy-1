@@ -1,5 +1,6 @@
 .header {
-  .flex(space-between, stretch);
+  //.flex(space-between, stretch);
+  .flex(flex-start, stretch);
   flex-wrap: wrap;
   background-color: @background-color-primary;
   min-height: 65px;
@@ -22,7 +23,8 @@
 
 .header__logo-link {
   .flex-center();
-  padding: 12px 0;
+  padding: 11px 0 12px;
+  margin-right: 56px;
   @media (min-width: @tablet-width) {
     margin-right: 13px;
   }
@@ -35,7 +37,7 @@
 }
 
 .header__logo-link--text {
-  margin-left: -8px;
+  //margin-left: -10px;
   @media (min-width: @tablet-width) {
     padding: 28px 0;
     margin-left: 0;
@@ -63,14 +65,14 @@
 
 .header__toggle {
   .button-reset();
-  width: 24px;
-  height: 24px;
+  width: 25px;
+  height: 25px;
   background-color: transparent;
   background-image: ~'url("../img/stack.svg#hamburger-menu")';
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 24px 24px;
-  margin: auto 0;
+  background-size: 25px 25px;
+  margin: auto 0  auto auto;
   cursor: pointer;
   &--nojs {
     background-image: none;

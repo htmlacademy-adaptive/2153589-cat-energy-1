@@ -42,13 +42,13 @@
   margin: 0;
   padding: 0;
   &--cat {
-    padding: 24px 0 8px;
+    padding: 24px 0 10px;
     @media (min-width: @tablet-width) {
       padding: 24px 0 55px;
     }
   }
   &--program {
-    padding: 22px 0 19px;
+    padding: 23px 0 20px;
     margin-bottom: 26px;
     position: relative;
     @media (min-width: @tablet-width) {
@@ -75,7 +75,7 @@
     }
   }
   &--comment {
-    margin-bottom: 52px;
+    margin-bottom: 25px;
     @media (min-width: @tablet-width) {
       margin-bottom: 65px;
     }
@@ -84,7 +84,7 @@
     }
   }
   &--add {
-    margin-bottom: 32px;
+    margin-bottom: 34px;
     @media (min-width: @tablet-width) {
       margin-bottom: 52px;
     }
@@ -106,7 +106,7 @@
     }
   }
   &--owner::after {
-    top: 34%;
+    top: 31%;
     left: 110%;
     @media (min-width: @tablet-width) {
       left: 107%;
@@ -133,7 +133,7 @@
     }
   }
   &--add {
-    margin-bottom: 36px;
+    margin-bottom: 34px;
     @media (min-width: @tablet-width) {
       margin-bottom: 57px;
     }
@@ -175,19 +175,20 @@
   text-transform: uppercase;
   font-family: @font-family-secondary;
   margin-left: 13px;
-  padding: 14px 40px 14px 15px;
+  padding: 15px 40px 12px 16px;
+  vertical-align: middle;
   border: none;
   outline: 1px solid #e7e7e7;
   flex-grow: 1;
   @media (min-width: @tablet-width) {
     .font(20px,30px);
-    padding: 11px 40px 11px 20px;
+    padding: 11px 40px 12px 20px;
   }
 }
 
 .form__input[type="email"],
 .form__input[type="tel"] {
-  padding: 15px 40px 12px 15px;
+  padding: 14px 40px 12px 15px;
   @media (min-width: @tablet-width) {
     .font(20px,30px);
     padding: 11px 40px 11px 20px;
@@ -200,6 +201,7 @@
   font-family: @font-family-secondary;
   margin: 0;
   padding: 14px 14px 14px 15px;
+  min-height: 149px;
   @media (min-width: @tablet-width) {
     padding: 11px 40px 11px 20px;
   }
