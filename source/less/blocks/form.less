@@ -3,7 +3,7 @@
   padding-bottom: 32px;
   font-family: @font-family-secondary;
   text-transform: uppercase;
-  border-top: 1px solid #d9d9d9;
+  border-top: 1px solid @color-d9d9d9;
   overflow: hidden;
   @media (min-width: @tablet-width) {
     border-top: none;
@@ -52,7 +52,7 @@
     margin-bottom: 26px;
     position: relative;
     @media (min-width: @tablet-width) {
-      border: 1px solid #d9d9d9;
+      border: 1px solid @color-d9d9d9;
       padding: 23px 27px;
       margin-bottom: 67px;
     }
@@ -178,7 +178,7 @@
   padding: 15px 40px 12px 16px;
   vertical-align: middle;
   border: none;
-  outline: 1px solid #e7e7e7;
+  outline: 1px solid @color-e7e7e7;
   flex-grow: 1;
   @media (min-width: @tablet-width) {
     .font(20px,30px);
@@ -212,7 +212,7 @@
 }
 
 .form__input:hover {
-  outline: 1px solid #cdcdcd;
+  outline: 1px solid @color-cdcdcd;
 }
 
 .form__input:focus {
@@ -225,12 +225,12 @@
 
 .form__input:invalid,
 .form__input.error {
-  outline: 2px solid #ff8282;
+  outline: 2px solid @color-ff8282;
 }
 
 .form__input:invalid + svg,
 .form__input.error + svg {
-  color: #ff8282;
+  color: @color-ff8282;
 }
 
 .form__list {
@@ -319,7 +319,7 @@
   left: -110px;
   width: 200vw;
   height: 1px;
-  background-color: #d9d9d9;
+  background-color: @color-d9d9d9;
   z-index: 2;
   @media (min-width: @tablet-width) {
     display: none;

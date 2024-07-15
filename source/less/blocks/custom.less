@@ -21,7 +21,7 @@
     width: 30px;
     height: 30px;
     background-color: @background-color-primary;
-    border: 1px solid #cdcdcd;
+    border: 1px solid @color-cdcdcd;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -60,12 +60,12 @@
 }
 
 .custom__input:not(:disabled):hover::after {
-  border-color: #bababa;
+  border-color: @color-bababa;
 }
 
 .custom__input:disabled::after,
 .custom__input:disabled + label {
-  border-color: #bababa;
+  border-color: @color-bababa;
   opacity: 0.3;
   pointer-events: none;
 }

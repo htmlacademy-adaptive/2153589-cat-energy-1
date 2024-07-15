@@ -1,6 +1,6 @@
 .footer {
   margin: 0;
-  background-color: #f2f2f2;
+  background-color: @color-f2f2f2;
   padding-top: 22px;
   padding-bottom: 20px;
   color: @text-color-primary;
@@ -24,7 +24,7 @@
   .flex-center();
   padding: 17px 0;
   &:not(:last-child) {
-    border-bottom: 1px solid #d9d9d9;
+    border-bottom: 1px solid @color-d9d9d9;
     @media (min-width: @tablet-width) {
       border: none;
     }
@@ -71,7 +71,7 @@
 
 .footer__socials-link--vkontakte {
   mask-image: ~'url("../img/stack.svg#vkontakte")';
-  background-color: #666666;
+  background-color: @color-666666;
   &:hover {
     background-color: @background-color-secondary;
   }
@@ -79,14 +79,14 @@
 
 .footer__socials-link--youtube {
   mask-image: ~'url("../img/stack.svg#youtube")';
-  background-color: #666666;
+  background-color: @color-666666;
   &:hover {
     background-color: @background-color-secondary;
   }
 }
 .footer__socials-link--telegram {
   mask-image: ~'url("../img/stack.svg#telegram")';
-  background-color: #666666;
+  background-color: @color-666666;
   height: 20px;
   width: 22px;
   &:hover {
@@ -111,7 +111,7 @@
 
 .footer__dev-link {
   padding-top: 2px;
-  color: #666666;
+  color: @color-666666;
   &:hover {
     color: @background-color-secondary;
   }
