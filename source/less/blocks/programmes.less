@@ -21,7 +21,7 @@
   row-gap: 22px;
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 270px;
-    padding: 68px 52px 52px 51px;
+    padding: 66px 49px 52px 52px;
     row-gap: 12px;
     br {
       display: none;
@@ -68,7 +68,7 @@
   background-image: ~'url("../img/stack.svg#programmes-cat-fat")';
   transform: translate(-11%, 0);
   @media (min-width: @tablet-width) {
-    transform: translate(10%, 12%);
+    transform: translate(8%, 12%);
   }
   @media (min-width: @desktop-width) {
     transform: translate(-12%, 2%);
@@ -145,6 +145,7 @@
     .font(16px, 24px);
     grid-column: 1;
     max-width: 400px;
+    margin-bottom: 12px;
     &::after {
       display: none;
     }
@@ -169,6 +170,7 @@
     .font(20px, 24px);
     max-width: 170px;
     grid-column: 1;
+    padding: 10px 26px 10px 0;
   }
   @media (min-width: @desktop-width) {
     grid-column: 1 / -1;
@@ -179,7 +181,7 @@
 .programmes__item-button::after {
   content: "";
   position: absolute;
-  right: 15px;
+  right: 13px;
   top: 50%;
   width: 24px;
   height: 12px;
@@ -191,7 +193,7 @@
 }
 
 .programmes__item-button--pro::after {
-  right: 19px;
+  right: 18px;
 }
 
 .programmes__item-button:hover::after {
