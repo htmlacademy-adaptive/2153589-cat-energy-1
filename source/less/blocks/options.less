@@ -9,8 +9,8 @@
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 245px;
-    padding-top: 78px;
-    padding-bottom: 86px;
+    padding-top: 77px;
+    padding-bottom: 87px;
     column-gap: 80px;
   }
 }
@@ -47,11 +47,11 @@
 
 .options__list {
   .list-reset();
-  border-top: 1px solid #cdcdcd;
-  margin-bottom: 35px;
+  border-top: 1px solid @color-cdcdcd;
+  margin-bottom: 34px;
   @media (min-width: @tablet-width) {
-    border-left: 1px solid #cdcdcd;
-    border-right: 1px solid #cdcdcd;
+    border-left: 1px solid @color-cdcdcd;
+    border-right: 1px solid @color-cdcdcd;
     margin-bottom: 69px;
   }
   @media (min-width: @desktop-width) {
@@ -62,7 +62,7 @@
 }
 
 .options__item {
-  border-bottom: 1px solid #cdcdcd;
+  border-bottom: 1px solid @color-cdcdcd;
   @media (min-width: @tablet-width) {
     min-height: 139px;
   }
@@ -107,9 +107,9 @@
   width: 100%;
   min-height: 100%;
   background-color: @background-color-promo;
-  padding: 58px 40px 40px;
+  padding: 59px 40px 44px;
   @media (min-width: @tablet-width) {
-    padding: 58px 70px 63px 77px;
+    padding: 62px 70px 61px 77px;
   }
   @media (min-width: @desktop-width) {
     padding: 57px 30px 38px;
@@ -144,11 +144,15 @@
   background-position: center;
   background-size: 100% 100%;
   flex-shrink: 0;
-  margin: 0 auto 50px;
+  margin: 0 auto 48px;
   @media (min-width: @tablet-width) {
-    margin: 0 264px 0 0;
+    margin: -3px 264px 0 0;
   }
   @media (min-width: @desktop-width) {
     margin: 0 auto 50px;
   }
+}
+
+.options .options__title {
+  margin-bottom: 79px;
 }

@@ -7,7 +7,7 @@
   padding-bottom: 11px;
   background-color: @background-color-primary;
   &--background {
-    background-color: #f2f2f2;
+    background-color: @color-f2f2f2;
   }
   @media (min-width: @tablet-width) {
     padding-top: 61px;
@@ -21,7 +21,7 @@
     z-index: 1;
     max-width: 565px;
     min-height: 193px;
-    padding: 57px 78px 46px 80px;
+    padding: 61px 78px 46px 79px;
     background-color: @background-color-primary;
   }
 }
@@ -29,7 +29,7 @@
 .contacts__welcome-text {
   .font(16px, 20px);
   flex-basis: 50%;
-  color: #111111;
+  color: @color-111111;
   font-family: @font-family-secondary;
   text-transform: uppercase;
   margin: 0 0 15px 0;
@@ -48,9 +48,13 @@
     .font(16px, 20px);
     text-align: right;
     padding-right: 37px;
+    margin-left: -2px;
+    margin-top: -2px;
   }
   @media (min-width: @desktop-width) {
     padding-right: 0;
+    text-align: left;
+    margin-left: 94px;
   }
 }
 
@@ -66,7 +70,7 @@
   margin: 0 auto;
   color: @text-color-primary;
   padding: 0;
-  background-color: #eaeaea;
+  background-color: @color-eaeaea;
   overflow: hidden;
   img {
     display: block;

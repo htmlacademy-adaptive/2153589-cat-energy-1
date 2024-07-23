@@ -1,10 +1,11 @@
 .examples {
   min-height: 613px;
   padding-bottom: 40px;
+  background-color: @color-eaeaea;
   @media (min-width: @tablet-width) {
-    padding-top: 28px;
+    padding-top: 26px;
     padding-bottom: 101px;
-    background: linear-gradient(180deg, @text-color-secondary 154px, #eaeaea 154px, #eaeaea 100%) no-repeat top;
+    background: linear-gradient(180deg, @text-color-secondary 154px, @color-eaeaea 154px, @color-eaeaea 100%) no-repeat top;
     background-size: cover;
   }
   @media (min-width: @desktop-width) {
@@ -13,19 +14,18 @@
     padding-top: 0;
     padding-bottom: 52px;
     min-height: 598px;
-    //background: linear-gradient(180deg, @text-color-secondary 154px, #eaeaea 154px, #eaeaea 100%) no-repeat top;
-    //background-size: cover;
   }
 }
 
 .examples__wrapper {
-  padding-top: 25px;
-  background-color: #eaeaea;
+  padding-top: 26px;
+  background-color: @color-eaeaea;
   @media (min-width: @tablet-width) {
     padding-top: 17px;
     background-color: @background-color-primary;
   }
   @media (min-width: @desktop-width) {
+    padding-top: 16px;
     background: none;
   }
 }
@@ -47,7 +47,7 @@
     margin: 0 0 55px;
   }
   @media (min-width: @desktop-width) {
-    max-width: 436px;
+    max-width: 433px;
     margin: 0 0 70px;
   }
 }
@@ -86,30 +86,29 @@
   @media (min-width: @desktop-width) {
     .flex(space-between, center);
     flex-basis: 50%;
-    max-width: 368px;
+    max-width: 327px;
     margin: 0;
     text-align: left;
     letter-spacing: 0.1px;
+    padding-top: 0;
   }
 }
 
 .examples__fact {
   margin: 0;
-  //flex-basis: 44%;
   min-width: 124px;
-  padding: 15px 12px;
-  outline: 3px solid #cdcdcd;
+  padding: 14px 12px 15px;
+  outline: 3px solid @color-cdcdcd;
   background-color: inherit;
   border-radius: 4px;
   position: relative;
   @media (min-width: @tablet-width) {
-    //flex-basis: 23%;
     min-width: 162px;
     padding: 16px 12px;
   }
   @media (min-width: @desktop-width) {
     flex-basis: 24%;
-    padding: 15px 20px;
+    padding: 15px 17px 15px 14px;
     margin-bottom: 60px;
   }
 }
@@ -146,8 +145,10 @@
     width: 80%;
   }
   @media (min-width: @desktop-width) {
-    background-color: #eaeaea;
+    background-color: @color-eaeaea;
     width: 86%;
+    top: 104%;
+    left: 49%;
   }
 }
 
@@ -156,7 +157,7 @@
   justify-content: center;
   min-height: 256px;
   width: 100%;
-  background-color: #eaeaea;
+  background-color: @color-eaeaea;
   position: relative;
   transition: all 0.8s;
   @media (min-width: @tablet-width) {
@@ -174,7 +175,7 @@
 
 .examples__slider-item {
   height: 100%;
-  background: #eaeaea;
+  background: @color-eaeaea;
   overflow: hidden;
   object-fit: contain;
   img {
@@ -184,12 +185,12 @@
     object-fit: contain;
   }
   @media (min-width: @tablet-width) {
-    background: linear-gradient(180deg, @text-color-secondary 29%, #eaeaea 29%, #eaeaea 100%) no-repeat top;
+    background: linear-gradient(180deg, @text-color-secondary 29%, @color-eaeaea 29%, @color-eaeaea 100%) no-repeat top;
     background-size: cover;
     height: 100%;
   }
   @media (min-width: @desktop-width) {
-    background: linear-gradient(180deg, @text-color-secondary 135px, #eaeaea 135px, #eaeaea 100%) no-repeat top;
+    background: linear-gradient(180deg, @text-color-secondary 135px, @color-eaeaea 135px, @color-eaeaea 100%) no-repeat top;
   }
 }
 
@@ -244,16 +245,16 @@
   width: 4px;
   padding: 0;
   border-radius: 2px;
-  background-color: #666666;
-  color: #666666;
+  background-color: @color-666666;
+  color: @color-666666;
   &::before {
     content: "";
     .position-absolute-center();
-    width: 38px;
-    height: 38px;
+    width: 39px;
+    height: 39px;
     background-color: @background-color-primary;
     border-radius: 50%;
-    border: 2px solid transparent;
+    border: 2px solid @color-666666;
     z-index: 2;
   }
   &::after {
@@ -262,7 +263,7 @@
     width: 27px;
     height: 27px;
     mask-image: ~'url("../img/stack.svg#slider-btn")';
-    background-color: #666666;
+    background-color: @color-666666;
     z-index: 3;
   }
 }

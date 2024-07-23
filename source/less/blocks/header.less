@@ -1,5 +1,5 @@
 .header {
-  .flex(space-between, stretch);
+  .flex(flex-start, stretch);
   flex-wrap: wrap;
   background-color: @background-color-primary;
   min-height: 65px;
@@ -22,7 +22,8 @@
 
 .header__logo-link {
   .flex-center();
-  padding: 12px 0;
+  padding: 11px 0 12px;
+  margin-right: 56px;
   @media (min-width: @tablet-width) {
     margin-right: 13px;
   }
@@ -35,7 +36,6 @@
 }
 
 .header__logo-link--text {
-  margin-left: -8px;
   @media (min-width: @tablet-width) {
     padding: 28px 0;
     margin-left: 0;
@@ -63,14 +63,14 @@
 
 .header__toggle {
   .button-reset();
-  width: 24px;
-  height: 24px;
+  width: 25px;
+  height: 25px;
   background-color: transparent;
   background-image: ~'url("../img/stack.svg#hamburger-menu")';
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 24px 24px;
-  margin: auto 0;
+  background-size: 25px 25px;
+  margin: auto 0  auto auto;
   cursor: pointer;
   &--nojs {
     background-image: none;
@@ -97,7 +97,7 @@
     position: absolute;
     top: 100%;
     left: 0;
-    border-bottom: 1px solid #e6e6e6;
+    border-bottom: 1px solid @color-e6e6e6;
     @media (min-width: @tablet-width) {
       border: none;
     }
@@ -110,10 +110,16 @@
     margin-left: auto;
     padding-right: 4px;
   }
+  &--form {
+    @media (min-width: @tablet-width) {
+      padding-right: 0;
+    }
+  }
   @media (min-width: @desktop-width) {
     position: static;
     max-width: 50%;
     background-color: transparent;
+    padding-right: 0;
   }
 }
 
@@ -130,7 +136,7 @@
 }
 
 .header__list-item {
-  border-top: 1px solid #e6e6e6;
+  border-top: 1px solid @color-e6e6e6;
   @media (min-width: @tablet-width) {
     margin-left: 19px;
     border: none;
@@ -184,7 +190,7 @@
   z-index: 3;
   background-color: @background-color-secondary;
   @media (min-width: @tablet-width) {
-    bottom: -8px;
+    bottom: -7px;
   }
 }
 
