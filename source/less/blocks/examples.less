@@ -86,7 +86,8 @@
   @media (min-width: @desktop-width) {
     .flex(space-between, center);
     flex-basis: 50%;
-    max-width: 327px;
+    //max-width: 327px;
+    max-width: 100%;
     margin: 0;
     text-align: left;
     letter-spacing: 0.1px;
@@ -152,37 +153,43 @@
   }
 }
 
-.examples__slider {
-  display: flex;
-  justify-content: center;
-  min-height: 256px;
-  width: 100%;
+.examples__slider-wrapper {
   background-color: @color-eaeaea;
-  position: relative;
-  transition: all 0.8s;
   @media (min-width: @tablet-width) {
-    background: linear-gradient(180deg, @text-color-secondary 23%, #eaeaea 23%, #eaeaea 100%) no-repeat top;
+    background: linear-gradient(180deg, @text-color-secondary 29%, @color-eaeaea 29%, @color-eaeaea 100%) no-repeat top;
     background-size: cover;
+  }
+  @media (min-width: @desktop-width) {
+    background: none;
+  }
+}
+
+.examples__slider {
+  min-height: 256px;
+  max-width: 280px;
+  margin: 0 auto;
+  position: relative;
+  @media (min-width: @tablet-width) {
+    background-size: cover;
+    max-width: 560px;
     min-height: 512px;
   }
   @media (min-width: @desktop-width) {
     max-height: 512px;
-    background: none;
-    margin-top: 18px;
-    margin-left: -110px;
+    margin: 18px 0 0 -110px;
   }
 }
 
 .examples__slider-item {
   height: 100%;
+  width: 100%;
   background: @color-eaeaea;
   overflow: hidden;
-  object-fit: contain;
   img {
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: fill;
   }
   @media (min-width: @tablet-width) {
     background: linear-gradient(180deg, @text-color-secondary 29%, @color-eaeaea 29%, @color-eaeaea 100%) no-repeat top;
@@ -202,29 +209,11 @@
   top: 0;
   z-index: 2;
   img {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 20px center;
-    transition: object-fit 1.5s linear;
-    @media (min-width: 321px) and (max-width: 767px) {
-      object-fit: fill;
-      object-position: center;
-      margin-left: 50%;
-    }
-    @media (min-width: @tablet-width) {
-      object-position: 102px center;
-      margin-left: 0;
-    }
-    @media (min-width: 769px) and (max-width: 1439px) {
-      object-fit: fill;
-      object-position: center;
-      margin-left: 50%;
-    }
-    @media (min-width: 1440px) {
-      object-position: 0 center;
-      margin-left: 0;
-    }
+    object-position: left center;
   }
 }
 
