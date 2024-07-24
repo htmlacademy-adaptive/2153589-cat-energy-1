@@ -3,7 +3,7 @@
   display: grid;
   row-gap: 22px;
   @media (min-width: @tablet-width) {
-    row-gap: 28px;
+    row-gap: 32px;
   }
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(2, 1fr);
@@ -16,19 +16,19 @@
 .programmes__item {
   display: grid;
   grid-template-columns: 75px 1fr;
-  padding: 24px 18px 11px 20px;
+  padding: 24px 18px 18px 20px;
   background-color: @color-f2f2f2;
   row-gap: 22px;
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 270px;
-    padding: 66px 49px 52px 52px;
-    row-gap: 12px;
+    padding: 66px 49px 59px 52px;
+    row-gap: 13px;
     br {
       display: none;
     }
   }
   @media (min-width: @desktop-width) {
-    padding: 43px 21px 52px 52px;
+    padding: 43px 21px 65px 52px;
     grid-template-columns: 150px 1fr;
     column-gap: 12px;
     row-gap: 38px;
@@ -125,7 +125,7 @@
 .programmes__item-desc {
   .flex-column();
   color: @text-color-thirdly;
-  margin: 0 0 11px;
+  margin: 0 0 20px;
   grid-column: span 2;
   position: relative;
 
@@ -145,7 +145,7 @@
     .font(16px, 24px);
     grid-column: 1;
     max-width: 400px;
-    margin-bottom: 12px;
+    margin: 0 0 12px;
     &::after {
       display: none;
     }
@@ -162,31 +162,42 @@
   .flex-row-align();
   justify-content: flex-start;
   text-align: left;
-  max-width: fit-content;
-  padding: 9px 12px 9px 0;
+  max-width: 98px;
+  padding: 8px 10px 9px 0;
   grid-column: span 2;
   position: relative;
-  z-index: 0;
-  background-color: @color-f2f2f2;
-  outline: 1px solid red;
   @media (min-width: @tablet-width) {
     .font(20px, 24px);
-    max-width: 170px;
+    max-width: 130px;
     grid-column: 1;
-    padding: 10px 26px 10px 0;
+    padding: 8px 26px 14px 0;
+    margin-top: 10px;
   }
   @media (min-width: @desktop-width) {
+    max-width: 129px;
     grid-column: 1 / -1;
-    margin-top: -30px;
+    margin-top: -19px;
   }
 }
+
+.programmes__item-button span {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: @color-f2f2f2;
+}
+
 .programmes__item-button::after {
   content: "";
   position: absolute;
   right: 0;
   top: 50%;
   transform: translate(27px, -50%);
-  z-index: -1;
+  z-index: 0;
   width: 32px;
   height: 12px;
   background-image: ~'url("../img/stack.svg#slim-btn-arrow")';
@@ -200,12 +211,21 @@
   transform: translate(36px, -50%);
 }
 
-//.programmes__item-button--pro::after {
-//  right: 18px;
-//}
+.programmes__item-button--pro::after {
+  transform: translate(24px, -50%);
+  @media (min-width: @desktop-width) {
+    transform: translate(25px, -50%);
+  }
+
+ }
 
 .programmes__item-button:active {
   opacity: 0.3;
 }
+
+
+
+
+
 
 
