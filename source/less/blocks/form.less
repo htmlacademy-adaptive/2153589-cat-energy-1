@@ -271,15 +271,18 @@
   &--check {
     display: grid;
     row-gap: 12px;
+    padding: 6px 5px 24px 24px;
     @media (min-width: @tablet-width) {
       grid-template-columns: repeat(2, 1fr);
       column-gap: 65px;
       row-gap: 41px;
       justify-content: space-between;
+      padding: 5px 5px 24px 37px;
     }
     @media (min-width: @desktop-width) {
       grid-template-columns: repeat(4, 1fr);
       column-gap: 122px;
+      padding: 5px 5px 24px 38px;
     }
   }
 }
@@ -366,16 +369,6 @@
 
 .form__list--radio .form__list-item:not(:last-child) {
   margin-bottom: 24px;
-}
-
-.form__list--check {
-  padding: 6px 5px 24px 24px;
-  @media (min-width: @tablet-width) {
-    padding: 5px 5px 24px 37px;
-  }
-  @media (min-width: @desktop-width) {
-    padding: 5px 5px 24px 38px;
-  }
 }
 
 .form__list--check .form__list-item:not(:last-child) {
