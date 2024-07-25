@@ -76,12 +76,28 @@
   &:hover {
     background-color: @background-color-secondary;
   }
+  &:focus {
+    outline: 2px solid @text-color-thirdly;
+    outline-offset: 2px;
+  }
+  &:focus-visible {
+    outline: none;
+    background-color: @background-color-secondary;
+  }
 }
 
 .footer__socials-link--youtube {
   mask-image: ~'url("../img/stack.svg#youtube")';
   background-color: @color-666666;
-  &:hover {
+  &:hover  {
+    background-color: @background-color-secondary;
+  }
+  &:focus {
+    outline: 2px solid @text-color-thirdly;
+    outline-offset: 2px;
+  }
+  &:focus-visible {
+    outline: none;
     background-color: @background-color-secondary;
   }
 }
@@ -90,8 +106,16 @@
   background-color: @color-666666;
   height: 20px;
   width: 22px;
-  &:hover {
+  &:hover  {
     background-color: @background-color-secondary;
+  }
+  &:focus {
+    outline: 2px solid @text-color-thirdly;
+    outline-offset: 2px;
+  }
+  &:focus-visible {
+    background-color: @background-color-secondary;
+    outline: none;
   }
 }
 
@@ -102,7 +126,7 @@
   @media (min-width: @tablet-width) {
     margin-right: 23px;
   }
-  &:hover {
+  &:hover, &:focus {
     opacity: 0.8;
   }
   &:active {
@@ -113,7 +137,7 @@
 .footer__dev-link {
   padding-top: 2px;
   color: @color-666666;
-  &:hover {
+  &:hover, &:focus {
     color: @background-color-secondary;
   }
   &:active {
