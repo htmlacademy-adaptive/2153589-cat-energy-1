@@ -6,6 +6,7 @@
   .font(16px, 18px);
   position: relative;
   padding: 0 0 0 21px;
+
   &::after {
     content: "";
     display: block;
@@ -25,25 +26,26 @@
       left: -38px;
     }
   }
+
   @media (min-width: @tablet-width) {
     .font(20px, 30px);
   }
 }
 
 .custom__input {
-  &[type="radio"]+label::after {
+  &[type="radio"] + label::after {
     border-radius: 50%;
   }
 }
 
-.custom__input[type="checkbox"]:checked+label::after {
+.custom__input[type="checkbox"]:checked + label::after {
   background: ~'url("../img/stack.svg#tick")', linear-gradient(0deg, @background-color-primary 0%, @background-color-primary 100%);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20px, 100% 100%;
 }
 
-.custom__input[type="radio"]:checked+label::after {
+.custom__input[type="radio"]:checked + label::after {
   background: ~'url("../img/stack.svg#radio")', linear-gradient(0deg, @background-color-primary 0%, @background-color-primary 100%);
   background-repeat: no-repeat;
   background-position: center;
@@ -53,11 +55,15 @@
   }
 }
 
-.custom__input:not(:disabled):hover+label::after {
+.custom__input:not(:disabled):hover + label::after {
   border-color: @color-bababa;
 }
 
-.custom__input:disabled+label::after,
+.custom__input:not(:disabled):focus + label::after {
+  outline: 1px solid @color-bababa;
+}
+
+.custom__input:disabled + label::after,
 .custom__input:disabled + label {
   border-color: @color-bababa;
   opacity: 0.3;
