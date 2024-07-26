@@ -2,12 +2,12 @@
   padding-top: 24px;
   padding-bottom: 50px;
   @media (min-width: @tablet-width) {
-    padding-top: 43px;
+    padding-top: 47px;
     padding-bottom: 38px;
     border-bottom: 1px solid @color-e6e6e6;
   }
   @media (min-width: @desktop-width) {
-    padding-top: 71px;
+    padding-top: 69px;
     margin-bottom: 5px;
     border-bottom: none;
   }
@@ -28,7 +28,6 @@
     column-gap: 139px;
   }
   @media (min-width: @desktop-width) {
-    grid-template-columns: repeat(4, 245px);
     justify-content: space-between;
     column-gap: 80px;
     row-gap: 40px;
@@ -77,6 +76,7 @@
 .features__item-desc {
   .flex-row-align();
   margin: 0;
+
   &::before {
     content: "";
     display: block;
@@ -94,18 +94,23 @@
       min-height: 80px;
     }
   }
+
   &--leaf::before {
     background-image: ~'url("../img/stack.svg#features-leaf")';
   }
+
   &--boil::before {
     background-image: ~'url("../img/stack.svg#features-boil")';
   }
+
   &--eat::before {
     background-image: ~'url("../img/stack.svg#features-eat")';
   }
+
   &--clock::before {
     background-image: ~'url("../img/stack.svg#features-clock")';
   }
+
   @media (min-width: @tablet-width) {
     .font(16px, 24px);
     flex-direction: column;

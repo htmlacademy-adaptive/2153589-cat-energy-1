@@ -4,16 +4,8 @@
 
 .custom__label {
   .font(16px, 18px);
-  @media (min-width: @tablet-width) {
-    .font(20px, 30px);
-  }
-}
-
-.custom__input {
-  width: 30px;
-  height: 30px;
-  margin: 0 15px 0 0;
   position: relative;
+  padding: 0 0 0 21px;
 
   &::after {
     content: "";
@@ -23,33 +15,37 @@
     background-color: @background-color-primary;
     border: 1px solid @color-cdcdcd;
     position: absolute;
-    left: 50%;
+    left: -25px;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
     z-index: 3;
     @media (min-width: @tablet-width) {
       width: 40px;
       height: 40px;
+      padding: 0 0 0 40px;
+      left: -38px;
     }
   }
-  &[type="radio"]::after {
-    border-radius: 50%;
-  }
+
   @media (min-width: @tablet-width) {
-    width: 40px;
-    height: 40px;
-    margin: 0 19px 0 0;
+    .font(20px, 30px);
   }
 }
 
-.custom__input[type="checkbox"]:checked::after {
+.custom__input {
+  &[type="radio"] + label::after {
+    border-radius: 50%;
+  }
+}
+
+.custom__input[type="checkbox"]:checked + label::after {
   background: ~'url("../img/stack.svg#tick")', linear-gradient(0deg, @background-color-primary 0%, @background-color-primary 100%);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20px, 100% 100%;
 }
 
-.custom__input[type="radio"]:checked::after {
+.custom__input[type="radio"]:checked + label::after {
   background: ~'url("../img/stack.svg#radio")', linear-gradient(0deg, @background-color-primary 0%, @background-color-primary 100%);
   background-repeat: no-repeat;
   background-position: center;
@@ -59,11 +55,15 @@
   }
 }
 
-.custom__input:not(:disabled):hover::after {
+.custom__input:not(:disabled):hover + label::after {
   border-color: @color-bababa;
 }
 
-.custom__input:disabled::after,
+.custom__input:not(:disabled):focus + label::after {
+  outline: 1px solid @color-bababa;
+}
+
+.custom__input:disabled + label::after,
 .custom__input:disabled + label {
   border-color: @color-bababa;
   opacity: 0.3;

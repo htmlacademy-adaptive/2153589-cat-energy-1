@@ -24,6 +24,7 @@
 .footer__item {
   .flex-center();
   padding: 17px 0;
+
   &:not(:last-child) {
     border-bottom: 1px solid @color-d9d9d9;
     @media (min-width: @tablet-width) {
@@ -45,6 +46,7 @@
   &:hover {
     opacity: 0.8;
   }
+
   &:active {
     opacity: 0.6;
   }
@@ -65,6 +67,20 @@
   .flex-center();
   width: 28px;
   height: 26px;
+
+  &:hover {
+    background-color: @background-color-secondary;
+  }
+
+  &:focus {
+    outline: 2px solid @text-color-thirdly;
+    outline-offset: 2px;
+  }
+
+  &:focus-visible {
+    background-color: @background-color-secondary;
+  }
+
   &:active {
     opacity: 0.3;
   }
@@ -73,26 +89,18 @@
 .footer__socials-link--vkontakte {
   mask-image: ~'url("../img/stack.svg#vkontakte")';
   background-color: @color-666666;
-  &:hover {
-    background-color: @background-color-secondary;
-  }
 }
 
 .footer__socials-link--youtube {
   mask-image: ~'url("../img/stack.svg#youtube")';
   background-color: @color-666666;
-  &:hover {
-    background-color: @background-color-secondary;
-  }
 }
+
 .footer__socials-link--telegram {
   mask-image: ~'url("../img/stack.svg#telegram")';
   background-color: @color-666666;
   height: 20px;
   width: 22px;
-  &:hover {
-    background-color: @background-color-secondary;
-  }
 }
 
 .footer__dev-text {
@@ -102,9 +110,12 @@
   @media (min-width: @tablet-width) {
     margin-right: 23px;
   }
-  &:hover {
+
+  &:hover,
+  &:focus {
     opacity: 0.8;
   }
+
   &:active {
     opacity: 0.6;
   }
@@ -113,9 +124,12 @@
 .footer__dev-link {
   padding-top: 2px;
   color: @color-666666;
-  &:hover {
+
+  &:hover,
+  &:focus {
     color: @background-color-secondary;
   }
+
   &:active {
     opacity: 0.3;
   }
