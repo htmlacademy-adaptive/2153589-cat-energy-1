@@ -1,6 +1,4 @@
 .header {
-  .flex(flex-start, stretch);
-  flex-wrap: wrap;
   background-color: @background-color-primary;
   min-height: 65px;
   position: relative;
@@ -11,13 +9,44 @@
     top: 0;
   }
 
+  @media (min-width: @desktop-width) {
+    position: relative;
+    background-color: transparent;
+  }
+}
+
+.header--index {
+  @media (min-width: @desktop-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 50%;
+      width: 50%;
+      height: 694px;
+      z-index: -1;
+      background: linear-gradient(0deg, @background-color-promo 0%, @background-color-promo 100%), ~'url("../img/promo-cat-desktop-nobackground.png")' no-repeat top left;
+      background-color: @color-4e4d52;
+      background-size: contain;
+      @media (min-resolution: 2dppx) {
+        background: linear-gradient(0deg, @background-color-promo 0%, @background-color-promo 100%), ~'url("../img/promo-cat-desktop-nobackground@2x.png")' no-repeat top left;
+        background-color: @color-4e4d52;
+        background-size: contain;
+      }
+    }
+  }
+}
+
+.header__container {
+  .flex(flex-start, stretch);
+  flex-wrap: wrap;
+
   @media (min-width: @tablet-width) {
     .flex(flex-start, flex-start);
     padding-top: 12px;
   }
   @media (min-width: @desktop-width) {
-    position: relative;
-    background-color: transparent;
     padding-top: 43px;
   }
 }

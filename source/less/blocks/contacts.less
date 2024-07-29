@@ -1,4 +1,11 @@
 .contacts {
+  background-color: @background-color-primary;
+  &--background {
+    background-color: @color-f2f2f2;
+  }
+}
+
+.contacts__container {
   position: relative;
 }
 
@@ -6,16 +13,11 @@
   display: flex;
   padding-top: 26px;
   padding-bottom: 11px;
-  background-color: @background-color-primary;
-
-  &--background {
-    background-color: @color-f2f2f2;
-  }
 
   @media (min-width: @tablet-width) {
     padding-top: 61px;
     padding-bottom: 47px;
-    padding-left: 69px;
+    padding-left: 40px;
   }
   @media (min-width: @desktop-width) {
     position: absolute;
